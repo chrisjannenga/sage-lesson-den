@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Cat, { type Mood } from './Cat';
 import { useProgress, type Status } from '@/lib/useProgress';
-import { DAYS, byDate, focusOf, lessonsOf, type Day, type Lesson } from '@/lib/schedule';
+import { DAYS, SUBJECTS, byDate, codeLabel, focusOf, lessonsOf, type Day, type Lesson, type SubjectInfo } from '@/lib/schedule';
 import { addDays, fmt, mondayOf, offLabel, todayKey } from '@/lib/dates';
 
 type Tab = 'today' | 'catchup' | 'week';
@@ -54,20 +54,20 @@ function LessonRow({ l, done, onToggle }: { l: Lesson; done: Done; onToggle: Tog
       </span>
       <span className="ltxt">
         <span className="lname">{l.name}</span>
-        <span className="code">IXL {l.code}</span>
+        <span className="code">{codeLabel(l)}</span>
       </span>
     </label>
   );
 }
 
-function Subject({ subj, ls, done, onToggle }: { subj: 'Math' | 'ELA'; ls: Lesson[]; done: Done; onToggle: Toggle }) {
+function SubjectSection({ s, ls, done, onToggle }: { s: SubjectInfo; ls: Lesson[]; done: Done; onToggle: Toggle }) {
   if (!ls.length) return null;
   const n = ls.filter((l) => done.has(l.id)).length;
   return (
-    <section className={'subj ' + (subj === 'Math' ? 'math' : 'ela')}>
+    <section className={'subj ' + s.cls}>
       <header>
-        <h3>{subj === 'Math' ? 'Math' : 'Language Arts'}</h3>
-        <span className="focus">{focusOf(ls)}</span>
+        <h3>{s.title}</h3>
+        <span className="focus">{s.subj === 'Read' ? '' : focusOf(ls)}</span>
         <span className="cnt">
           {n} of {ls.length}
         </span>
@@ -84,8 +84,9 @@ function DaySections({ day, done, onToggle, onlyOpen }: { day: Day; done: Done; 
   if (onlyOpen) ls = ls.filter((l) => !done.has(l.id));
   return (
     <>
-      <Subject subj="Math" ls={ls.filter((l) => l.subj === 'Math')} done={done} onToggle={onToggle} />
-      <Subject subj="ELA" ls={ls.filter((l) => l.subj === 'ELA')} done={done} onToggle={onToggle} />
+      {SUBJECTS.map((s) => (
+        <SubjectSection key={s.key} s={s} ls={ls.filter((l) => l.subj === s.subj)} done={done} onToggle={onToggle} />
+      ))}
     </>
   );
 }
@@ -109,7 +110,7 @@ function Hero(props: { title: string; sub: string; n: number; total: number; moo
           </div>
         </div>
         <div className="stat">
-          {n} of {total} lessons done{pct === 100 && <span className="ok-note"> · Purr-fect!</span>}
+          {n} of {total} checked off{pct === 100 && <span className="ok-note"> · Purr-fect!</span>}
         </div>
       </div>
     </section>
@@ -221,6 +222,14 @@ export default function Den() {
           ·{' '}
           <a href="https://www.ixl.com/ela/skill-plans/arizona-english-language-arts-standards-grade-4" target="_blank" rel="noopener noreferrer">
             Language Arts skill plan
+          </a>{' '}
+          ·{' '}
+          <a href="https://www.ixl.com/science/skill-plans/arizona-science-standards-grade-4" target="_blank" rel="noopener noreferrer">
+            Science
+          </a>{' '}
+          ·{' '}
+          <a href="https://www.ixl.com/social-studies/grade-4" target="_blank" rel="noopener noreferrer">
+            Social Studies
           </a>
         </span>
       </div>
@@ -403,7 +412,7 @@ function WeekView(props: {
                 <div className="fill" style={{ width: pct + '%' }} />
               </div>
               <div className="stat">
-                {n} of {total} lessons done
+                {n} of {total} checked off
               </div>
             </>
           )}
@@ -426,8 +435,6 @@ function WeekView(props: {
           }
           const c = countsFor(d, done);
           const ls = lessonsOf(d);
-          const mth = ls.filter((l) => l.subj === 'Math');
-          const ela = ls.filter((l) => l.subj === 'ELA');
           let tag: React.ReactNode = null;
           if (c.n === c.total) tag = <span className="tag done">Done</span>;
           else if (k < today) tag = <span className="tag missed">{c.total - c.n} missed</span>;
@@ -440,14 +447,21 @@ function WeekView(props: {
                   {tag} <span className="meta">{c.n}/{c.total}</span>
                 </span>
               </header>
-              <div className="sublabel math">Math · {focusOf(mth)}</div>
-              {mth.map((l) => (
-                <LessonRow key={l.id} l={l} done={done} onToggle={onToggle} />
-              ))}
-              <div className="sublabel ela">Language Arts · {focusOf(ela)}</div>
-              {ela.map((l) => (
-                <LessonRow key={l.id} l={l} done={done} onToggle={onToggle} />
-              ))}
+              {SUBJECTS.map((s) => {
+                const sl = ls.filter((l) => l.subj === s.subj);
+                if (!sl.length) return null;
+                return (
+                  <div key={s.key}>
+                    <div className={'sublabel ' + s.cls}>
+                      {s.title}
+                      {s.subj === 'Read' ? '' : ' · ' + focusOf(sl)}
+                    </div>
+                    {sl.map((l) => (
+                      <LessonRow key={l.id} l={l} done={done} onToggle={onToggle} />
+                    ))}
+                  </div>
+                );
+              })}
               <footer>
                 {c.n < c.total && (
                   <button className="linklike" onClick={() => markDay(d)}>

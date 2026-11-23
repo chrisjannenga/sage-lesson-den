@@ -1,0 +1,2702 @@
+[
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "GGE",
+  "name": "Compare numbers using multiplication"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "QKB",
+  "name": "Compare numbers using multiplication: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "YCW",
+  "name": "Comparison word problems: addition or multiplication?"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "AH8",
+  "name": "Comparison word problems with multiplication and division: larger numbers"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "9GX",
+  "name": "Divide larger numbers by 1-digit numbers: comparison word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "5WV",
+  "name": "Divide 2-digit numbers by 1-digit numbers: interpret remainders"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "J8D",
+  "name": "Divide larger numbers by 1-digit numbers: interpret remainders"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "28P",
+  "name": "Use strip diagrams to represent and solve multistep addition and subtraction word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "CZQ",
+  "name": "Multi-step word problems with strip diagrams"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "G8Z",
+  "name": "Use strip diagrams to represent and solve multistep word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "TFH",
+  "name": "Multiply 1-digit numbers by 2-digit numbers: multi-step word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "M9R",
+  "name": "Multiply 1-digit numbers by 3-digit or 4-digit numbers: multi-step word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "RM5",
+  "name": "Multiply a 2-digit number by a 2-digit number: multi-step word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "CZM",
+  "name": "Multi-step addition and subtraction word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "EA9",
+  "name": "Multi-step word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "SLS",
+  "name": "Multi-step word problems involving remainders"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "X64",
+  "name": "Word problems with extra or missing information"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "5SJ",
+  "name": "Write equations to represent word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "F5H",
+  "name": "Use equations to solve addition and subtraction word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "J8E",
+  "name": "Use equations to solve multi-step addition and subtraction word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "ZJ5",
+  "name": "Use equations to solve multi-step multiplication word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "VDA",
+  "name": "Use equations to solve multi-step division word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "KLA",
+  "name": "Estimate products word problems: identify reasonable answers"
+ },
+ {
+  "subject": "Math",
+  "category": "Word Problems & Multiplicative Comparison",
+  "code": "K6X",
+  "name": "Multi-step word problems: identify reasonable answers"
+ },
+ {
+  "subject": "Math",
+  "category": "Factors & Multiples",
+  "code": "TNF",
+  "name": "Prime and composite: up to 20"
+ },
+ {
+  "subject": "Math",
+  "category": "Factors & Multiples",
+  "code": "L9R",
+  "name": "Prime and composite: up to 100"
+ },
+ {
+  "subject": "Math",
+  "category": "Factors & Multiples",
+  "code": "EFB",
+  "name": "Choose the multiples of a given number up to 10"
+ },
+ {
+  "subject": "Math",
+  "category": "Factors & Multiples",
+  "code": "JMX",
+  "name": "Sort multiples into a Venn diagram"
+ },
+ {
+  "subject": "Math",
+  "category": "Factors & Multiples",
+  "code": "8ZV",
+  "name": "Understand factors and factor pairs"
+ },
+ {
+  "subject": "Math",
+  "category": "Factors & Multiples",
+  "code": "2S9",
+  "name": "Identify factors"
+ },
+ {
+  "subject": "Math",
+  "category": "Factors & Multiples",
+  "code": "URL",
+  "name": "Find all the factor pairs of a number"
+ },
+ {
+  "subject": "Math",
+  "category": "Factors & Multiples",
+  "code": "U9N",
+  "name": "Choose numbers with a particular product"
+ },
+ {
+  "subject": "Math",
+  "category": "Number Patterns",
+  "code": "V68",
+  "name": "Make a repeating pattern"
+ },
+ {
+  "subject": "Math",
+  "category": "Number Patterns",
+  "code": "5P2",
+  "name": "Use a rule to complete a number pattern"
+ },
+ {
+  "subject": "Math",
+  "category": "Number Patterns",
+  "code": "NVV",
+  "name": "Extend growing shape patterns"
+ },
+ {
+  "subject": "Math",
+  "category": "Number Patterns",
+  "code": "AKK",
+  "name": "Extend repeating shape patterns"
+ },
+ {
+  "subject": "Math",
+  "category": "Number Patterns",
+  "code": "KG8",
+  "name": "Find the next shape in a pattern"
+ },
+ {
+  "subject": "Math",
+  "category": "Number Patterns",
+  "code": "FNW",
+  "name": "Complete a repeating pattern"
+ },
+ {
+  "subject": "Math",
+  "category": "Number Patterns",
+  "code": "C9H",
+  "name": "What is true about the given pattern?"
+ },
+ {
+  "subject": "Math",
+  "category": "Number Patterns",
+  "code": "35J",
+  "name": "What is true about the pattern made by the rule?"
+ },
+ {
+  "subject": "Math",
+  "category": "Number Patterns",
+  "code": "PFV",
+  "name": "Identify mistakes in number patterns"
+ },
+ {
+  "subject": "Math",
+  "category": "Number Patterns",
+  "code": "F92",
+  "name": "Solve word problems involving number patterns in tables"
+ },
+ {
+  "subject": "Math",
+  "category": "Place Value & Number Names",
+  "code": "WLP",
+  "name": "Value of a digit"
+ },
+ {
+  "subject": "Math",
+  "category": "Place Value & Number Names",
+  "code": "9DJ",
+  "name": "Relationship between place values"
+ },
+ {
+  "subject": "Math",
+  "category": "Place Value & Number Names",
+  "code": "9R2",
+  "name": "Find 10 or 100 times a number"
+ },
+ {
+  "subject": "Math",
+  "category": "Place Value & Number Names",
+  "code": "2Y7",
+  "name": "Place value models"
+ },
+ {
+  "subject": "Math",
+  "category": "Place Value & Number Names",
+  "code": "Z47",
+  "name": "Place value word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Place Value & Number Names",
+  "code": "B5N",
+  "name": "Place value review"
+ },
+ {
+  "subject": "Math",
+  "category": "Place Value & Number Names",
+  "code": "5G4",
+  "name": "Writing numbers up to one million: convert between words and digits"
+ },
+ {
+  "subject": "Math",
+  "category": "Place Value & Number Names",
+  "code": "2PZ",
+  "name": "Spell word names for numbers up to one million"
+ },
+ {
+  "subject": "Math",
+  "category": "Place Value & Number Names",
+  "code": "SQQ",
+  "name": "Writing numbers up to 100,000 in words: convert words to digits"
+ },
+ {
+  "subject": "Math",
+  "category": "Place Value & Number Names",
+  "code": "2RZ",
+  "name": "Writing numbers up to 100,000 in words: convert digits to words"
+ },
+ {
+  "subject": "Math",
+  "category": "Place Value & Number Names",
+  "code": "7WT",
+  "name": "Writing numbers up to one million in words: convert digits to words"
+ },
+ {
+  "subject": "Math",
+  "category": "Place Value & Number Names",
+  "code": "M5V",
+  "name": "Convert between standard and expanded form"
+ },
+ {
+  "subject": "Math",
+  "category": "Place Value & Number Names",
+  "code": "6Y2",
+  "name": "Compare numbers up to one million"
+ },
+ {
+  "subject": "Math",
+  "category": "Place Value & Number Names",
+  "code": "DP2",
+  "name": "Compare numbers up to one hundred thousand"
+ },
+ {
+  "subject": "Math",
+  "category": "Rounding & Estimating",
+  "code": "E6V",
+  "name": "Rounding: up to millions place"
+ },
+ {
+  "subject": "Math",
+  "category": "Rounding & Estimating",
+  "code": "UA7",
+  "name": "Round a number to any place: up to hundred thousands"
+ },
+ {
+  "subject": "Math",
+  "category": "Rounding & Estimating",
+  "code": "CT2",
+  "name": "Rounding input/output tables"
+ },
+ {
+  "subject": "Math",
+  "category": "Rounding & Estimating",
+  "code": "VMD",
+  "name": "Estimate sums"
+ },
+ {
+  "subject": "Math",
+  "category": "Rounding & Estimating",
+  "code": "SB9",
+  "name": "Estimate sums: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Rounding & Estimating",
+  "code": "QJY",
+  "name": "Estimate differences"
+ },
+ {
+  "subject": "Math",
+  "category": "Rounding & Estimating",
+  "code": "GWS",
+  "name": "Estimate differences: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Rounding & Estimating",
+  "code": "WDG",
+  "name": "Estimate products: multiply by 1-digit numbers"
+ },
+ {
+  "subject": "Math",
+  "category": "Rounding & Estimating",
+  "code": "2TR",
+  "name": "Estimate products: multiply by 2-digit numbers"
+ },
+ {
+  "subject": "Math",
+  "category": "Rounding & Estimating",
+  "code": "WGL",
+  "name": "Estimate products: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Rounding & Estimating",
+  "code": "2FS",
+  "name": "Divide by 1-digit numbers: pick the better estimate"
+ },
+ {
+  "subject": "Math",
+  "category": "Rounding & Estimating",
+  "code": "CRD",
+  "name": "Estimate sums, differences, products, and quotients: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Add & Subtract Multi-Digit Numbers",
+  "code": "RG2",
+  "name": "Add two multi-digit numbers"
+ },
+ {
+  "subject": "Math",
+  "category": "Add & Subtract Multi-Digit Numbers",
+  "code": "ZPY",
+  "name": "Add two multi-digit numbers: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Add & Subtract Multi-Digit Numbers",
+  "code": "D9R",
+  "name": "Properties of addition"
+ },
+ {
+  "subject": "Math",
+  "category": "Add & Subtract Multi-Digit Numbers",
+  "code": "ZMC",
+  "name": "Add 3 or more numbers up to millions"
+ },
+ {
+  "subject": "Math",
+  "category": "Add & Subtract Multi-Digit Numbers",
+  "code": "VQH",
+  "name": "Addition: fill in the missing digits"
+ },
+ {
+  "subject": "Math",
+  "category": "Add & Subtract Multi-Digit Numbers",
+  "code": "P5U",
+  "name": "Choose numbers with a particular sum"
+ },
+ {
+  "subject": "Math",
+  "category": "Add & Subtract Multi-Digit Numbers",
+  "code": "VP2",
+  "name": "Subtract two multi-digit numbers"
+ },
+ {
+  "subject": "Math",
+  "category": "Add & Subtract Multi-Digit Numbers",
+  "code": "R9N",
+  "name": "Subtract two multi-digit numbers: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Add & Subtract Multi-Digit Numbers",
+  "code": "UXK",
+  "name": "Subtraction: fill in the missing digits"
+ },
+ {
+  "subject": "Math",
+  "category": "Add & Subtract Multi-Digit Numbers",
+  "code": "XEV",
+  "name": "Choose numbers with a particular difference"
+ },
+ {
+  "subject": "Math",
+  "category": "Add & Subtract Multi-Digit Numbers",
+  "code": "WEG",
+  "name": "Add and subtract numbers ending in zeros"
+ },
+ {
+  "subject": "Math",
+  "category": "Add & Subtract Multi-Digit Numbers",
+  "code": "RJJ",
+  "name": "Comparison word problems with addition and subtraction"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Facts & 1-Digit Factors",
+  "code": "FW9",
+  "name": "Multiplication facts to 12"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Facts & 1-Digit Factors",
+  "code": "W6D",
+  "name": "Use one multiplication fact to complete another"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Facts & 1-Digit Factors",
+  "code": "8UH",
+  "name": "Multiply 1-digit numbers by teen numbers using grids"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Facts & 1-Digit Factors",
+  "code": "VCM",
+  "name": "Multiply 1-digit numbers by 2-digit numbers: choose the area model"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Facts & 1-Digit Factors",
+  "code": "HZX",
+  "name": "Multiply 1-digit numbers by 2-digit numbers using area models"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Facts & 1-Digit Factors",
+  "code": "RP9",
+  "name": "Multiply 1-digit numbers by 3-digit or 4-digit numbers: choose the area model"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Facts & 1-Digit Factors",
+  "code": "WKL",
+  "name": "Multiply 1-digit numbers by 3-digit or 4-digit numbers using area models"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Facts & 1-Digit Factors",
+  "code": "GDW",
+  "name": "Multiply 1-digit numbers by 2-digit numbers"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Facts & 1-Digit Factors",
+  "code": "UR9",
+  "name": "Multiply 1-digit numbers by 2-digit numbers: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Facts & 1-Digit Factors",
+  "code": "SEG",
+  "name": "Multiply 1-digit numbers by 3-digit or 4-digit numbers using expanded form"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Facts & 1-Digit Factors",
+  "code": "23C",
+  "name": "Multiply 1-digit numbers by multi-digit numbers using partial products"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Facts & 1-Digit Factors",
+  "code": "PPM",
+  "name": "Multiply 1-digit numbers by 3-digit or 4-digit numbers"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Facts & 1-Digit Factors",
+  "code": "AQ6",
+  "name": "Multiply 1-digit numbers by 3-digit or 4-digit numbers: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: 2-Digit Factors",
+  "code": "ASZ",
+  "name": "Multiply 2-digit numbers by 2-digit numbers: choose the area model"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: 2-Digit Factors",
+  "code": "8K7",
+  "name": "Multiply 2-digit numbers by 2-digit numbers using area models"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: 2-Digit Factors",
+  "code": "ERB",
+  "name": "Box multiplication"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: 2-Digit Factors",
+  "code": "LBW",
+  "name": "Lattice multiplication"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: 2-Digit Factors",
+  "code": "XLZ",
+  "name": "Multiply 2-digit numbers by 2-digit numbers using partial products"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: 2-Digit Factors",
+  "code": "XQ8",
+  "name": "Multiply a 2-digit number by a 2-digit number: complete the missing steps"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: 2-Digit Factors",
+  "code": "MLC",
+  "name": "Multiply a 2-digit number by a 2-digit number"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: 2-Digit Factors",
+  "code": "GZG",
+  "name": "Multiply a 2-digit number by a 2-digit number: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Strategies & Properties",
+  "code": "Y5K",
+  "name": "Multiplication patterns over increasing place values"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Strategies & Properties",
+  "code": "7NS",
+  "name": "Multiply by multiples of ten"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Strategies & Properties",
+  "code": "K98",
+  "name": "Multiply two multiples of ten: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Strategies & Properties",
+  "code": "B6N",
+  "name": "Properties of multiplication"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Strategies & Properties",
+  "code": "US7",
+  "name": "Distributive property: find the missing factor"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplication: Strategies & Properties",
+  "code": "LXG",
+  "name": "Multiply using the distributive property"
+ },
+ {
+  "subject": "Math",
+  "category": "Division Basics",
+  "code": "MYU",
+  "name": "Choose numbers with a particular quotient"
+ },
+ {
+  "subject": "Math",
+  "category": "Division Basics",
+  "code": "M49",
+  "name": "Divide 2-digit numbers by 1-digit numbers using arrays"
+ },
+ {
+  "subject": "Math",
+  "category": "Division Basics",
+  "code": "7LG",
+  "name": "Divide 2-digit numbers by 1-digit numbers using area models"
+ },
+ {
+  "subject": "Math",
+  "category": "Division Basics",
+  "code": "UFM",
+  "name": "Divide 2-digit numbers by 1-digit numbers: complete the table"
+ },
+ {
+  "subject": "Math",
+  "category": "Division Basics",
+  "code": "QMT",
+  "name": "Divide 2-digit numbers by 1-digit numbers: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Division Basics",
+  "code": "XD2",
+  "name": "Divide 2-digit numbers by 1-digit numbers"
+ },
+ {
+  "subject": "Math",
+  "category": "Division Basics",
+  "code": "6UL",
+  "name": "Divide 3-digit numbers by 1-digit numbers using area models"
+ },
+ {
+  "subject": "Math",
+  "category": "Division Basics",
+  "code": "YQL",
+  "name": "Divide using partial quotients"
+ },
+ {
+  "subject": "Math",
+  "category": "Division Basics",
+  "code": "EGL",
+  "name": "Divide using partial quotients with remainders"
+ },
+ {
+  "subject": "Math",
+  "category": "Division Basics",
+  "code": "DKK",
+  "name": "Divide larger numbers by 1-digit numbers: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Division Basics",
+  "code": "X86",
+  "name": "Divide larger numbers by 1-digit numbers"
+ },
+ {
+  "subject": "Math",
+  "category": "Division Basics",
+  "code": "2UB",
+  "name": "Divide larger numbers by 1-digit numbers: complete the table"
+ },
+ {
+  "subject": "Math",
+  "category": "Division: Strategies & Properties",
+  "code": "Z5Y",
+  "name": "Division patterns over increasing place values"
+ },
+ {
+  "subject": "Math",
+  "category": "Division: Strategies & Properties",
+  "code": "2K3",
+  "name": "Divide numbers ending in zeros by 1-digit numbers"
+ },
+ {
+  "subject": "Math",
+  "category": "Division: Strategies & Properties",
+  "code": "6J4",
+  "name": "Divide numbers ending in zeros by 1-digit numbers: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Division: Strategies & Properties",
+  "code": "LAK",
+  "name": "Properties of division"
+ },
+ {
+  "subject": "Math",
+  "category": "Division: Strategies & Properties",
+  "code": "GDX",
+  "name": "Divide using the distributive property"
+ },
+ {
+  "subject": "Math",
+  "category": "Equivalent Fractions",
+  "code": "HYC",
+  "name": "Find equivalent fractions using area models"
+ },
+ {
+  "subject": "Math",
+  "category": "Equivalent Fractions",
+  "code": "CLW",
+  "name": "Identify equivalent fractions using number lines"
+ },
+ {
+  "subject": "Math",
+  "category": "Equivalent Fractions",
+  "code": "WQL",
+  "name": "Graph equivalent fractions on number lines"
+ },
+ {
+  "subject": "Math",
+  "category": "Equivalent Fractions",
+  "code": "K8C",
+  "name": "Find equivalent fractions using multiplication and division"
+ },
+ {
+  "subject": "Math",
+  "category": "Equivalent Fractions",
+  "code": "GSG",
+  "name": "Identify equivalent fractions"
+ },
+ {
+  "subject": "Math",
+  "category": "Equivalent Fractions",
+  "code": "7CY",
+  "name": "Equivalent fractions: find the missing numerator or denominator"
+ },
+ {
+  "subject": "Math",
+  "category": "Equivalent Fractions",
+  "code": "VLP",
+  "name": "Fractions with denominators of 10 and 100"
+ },
+ {
+  "subject": "Math",
+  "category": "Comparing Fractions",
+  "code": "7XF",
+  "name": "Compare fractions using models"
+ },
+ {
+  "subject": "Math",
+  "category": "Comparing Fractions",
+  "code": "LUS",
+  "name": "Benchmark fractions"
+ },
+ {
+  "subject": "Math",
+  "category": "Comparing Fractions",
+  "code": "EHJ",
+  "name": "Compare fractions using benchmarks"
+ },
+ {
+  "subject": "Math",
+  "category": "Comparing Fractions",
+  "code": "UKZ",
+  "name": "Compare fractions using benchmarks: find the missing numerator"
+ },
+ {
+  "subject": "Math",
+  "category": "Comparing Fractions",
+  "code": "U2K",
+  "name": "Compare fractions in recipes"
+ },
+ {
+  "subject": "Math",
+  "category": "Comparing Fractions",
+  "code": "99U",
+  "name": "Compare fractions"
+ },
+ {
+  "subject": "Math",
+  "category": "Adding & Subtracting Fractions",
+  "code": "Y5W",
+  "name": "Add fractions with like denominators using area models"
+ },
+ {
+  "subject": "Math",
+  "category": "Adding & Subtracting Fractions",
+  "code": "P99",
+  "name": "Subtract fractions with like denominators using area models"
+ },
+ {
+  "subject": "Math",
+  "category": "Adding & Subtracting Fractions",
+  "code": "Z63",
+  "name": "Add fractions with like denominators using strip models"
+ },
+ {
+  "subject": "Math",
+  "category": "Adding & Subtracting Fractions",
+  "code": "QAS",
+  "name": "Subtract fractions with like denominators using strip models"
+ },
+ {
+  "subject": "Math",
+  "category": "Adding & Subtracting Fractions",
+  "code": "6QH",
+  "name": "Add fractions with like denominators using number lines"
+ },
+ {
+  "subject": "Math",
+  "category": "Adding & Subtracting Fractions",
+  "code": "MJX",
+  "name": "Subtract fractions with like denominators using number lines"
+ },
+ {
+  "subject": "Math",
+  "category": "Adding & Subtracting Fractions",
+  "code": "GAK",
+  "name": "Add and subtract fractions with like denominators using number lines"
+ },
+ {
+  "subject": "Math",
+  "category": "Adding & Subtracting Fractions",
+  "code": "PDU",
+  "name": "Add fractions with like denominators"
+ },
+ {
+  "subject": "Math",
+  "category": "Adding & Subtracting Fractions",
+  "code": "AVF",
+  "name": "Subtract fractions with like denominators"
+ },
+ {
+  "subject": "Math",
+  "category": "Adding & Subtracting Fractions",
+  "code": "FXD",
+  "name": "Add and subtract fractions with like denominators"
+ },
+ {
+  "subject": "Math",
+  "category": "Adding & Subtracting Fractions",
+  "code": "QG2",
+  "name": "Decompose fractions into unit fractions using models"
+ },
+ {
+  "subject": "Math",
+  "category": "Adding & Subtracting Fractions",
+  "code": "XHG",
+  "name": "Decompose fractions into unit fractions"
+ },
+ {
+  "subject": "Math",
+  "category": "Adding & Subtracting Fractions",
+  "code": "N2Z",
+  "name": "Decompose fractions"
+ },
+ {
+  "subject": "Math",
+  "category": "Adding & Subtracting Fractions",
+  "code": "UEW",
+  "name": "Decompose fractions multiple ways"
+ },
+ {
+  "subject": "Math",
+  "category": "Mixed Numbers & Fraction Word Problems",
+  "code": "WZN",
+  "name": "Add and subtract mixed numbers with like denominators - without regrouping"
+ },
+ {
+  "subject": "Math",
+  "category": "Mixed Numbers & Fraction Word Problems",
+  "code": "L9M",
+  "name": "Add mixed numbers with like denominators"
+ },
+ {
+  "subject": "Math",
+  "category": "Mixed Numbers & Fraction Word Problems",
+  "code": "SLQ",
+  "name": "Subtract mixed numbers with like denominators"
+ },
+ {
+  "subject": "Math",
+  "category": "Mixed Numbers & Fraction Word Problems",
+  "code": "9AS",
+  "name": "Add and subtract mixed numbers with like denominators"
+ },
+ {
+  "subject": "Math",
+  "category": "Mixed Numbers & Fraction Word Problems",
+  "code": "XBR",
+  "name": "Add and subtract fractions with like denominators: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Mixed Numbers & Fraction Word Problems",
+  "code": "LYR",
+  "name": "Add and subtract fractions with like denominators in recipes"
+ },
+ {
+  "subject": "Math",
+  "category": "Mixed Numbers & Fraction Word Problems",
+  "code": "5G5",
+  "name": "Add and subtract fractions with like denominators: multi-step word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Mixed Numbers & Fraction Word Problems",
+  "code": "YB5",
+  "name": "Add and subtract mixed numbers with like denominators in recipes"
+ },
+ {
+  "subject": "Math",
+  "category": "Mixed Numbers & Fraction Word Problems",
+  "code": "6KM",
+  "name": "Add and subtract mixed numbers with like denominators: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Mixed Numbers & Fraction Word Problems",
+  "code": "PR2",
+  "name": "Add and subtract fractions and mixed numbers with like denominators: multi-step word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplying Fractions by Whole Numbers",
+  "code": "8J3",
+  "name": "Multiply unit fractions by whole numbers using models"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplying Fractions by Whole Numbers",
+  "code": "XKJ",
+  "name": "Multiply unit fractions by whole numbers using number lines"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplying Fractions by Whole Numbers",
+  "code": "VYG",
+  "name": "Multiples of unit fractions: find the missing numbers"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplying Fractions by Whole Numbers",
+  "code": "VGC",
+  "name": "Multiply unit fractions by whole numbers: sorting"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplying Fractions by Whole Numbers",
+  "code": "Y5C",
+  "name": "Multiply fractions by whole numbers using models"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplying Fractions by Whole Numbers",
+  "code": "CZ7",
+  "name": "Multiply fractions by whole numbers using models: complete the equation"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplying Fractions by Whole Numbers",
+  "code": "Q7B",
+  "name": "Multiply fractions by whole numbers using number lines"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplying Fractions by Whole Numbers",
+  "code": "EXQ",
+  "name": "Multiply unit fractions by whole numbers"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplying Fractions by Whole Numbers",
+  "code": "RSY",
+  "name": "Multiples of fractions: find the missing numbers"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplying Fractions by Whole Numbers",
+  "code": "X48",
+  "name": "Multiply fractions by whole numbers: sorting"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplying Fractions by Whole Numbers",
+  "code": "JLH",
+  "name": "Multiply fractions by whole numbers"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplying Fractions by Whole Numbers",
+  "code": "M2K",
+  "name": "Multiply mixed numbers by whole numbers"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplying Fractions by Whole Numbers",
+  "code": "DSB",
+  "name": "Multiply unit fractions by whole numbers: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplying Fractions by Whole Numbers",
+  "code": "LX8",
+  "name": "Multiply fractions by whole numbers: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplying Fractions by Whole Numbers",
+  "code": "SFV",
+  "name": "Multiply mixed numbers by whole numbers: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplying Fractions by Whole Numbers",
+  "code": "7B3",
+  "name": "Multiply fractions and mixed numbers by whole numbers in recipes"
+ },
+ {
+  "subject": "Math",
+  "category": "Multiplying Fractions by Whole Numbers",
+  "code": "QDB",
+  "name": "Multiply fractions and mixed numbers by whole numbers: multi-step word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Decimals",
+  "code": "9RJ",
+  "name": "Add fractions: denominators 10 and 100"
+ },
+ {
+  "subject": "Math",
+  "category": "Decimals",
+  "code": "TZH",
+  "name": "Identify fraction expressions with a particular sum: denominators of 10 and 100"
+ },
+ {
+  "subject": "Math",
+  "category": "Decimals",
+  "code": "TPV",
+  "name": "Model decimals and fractions"
+ },
+ {
+  "subject": "Math",
+  "category": "Decimals",
+  "code": "2N9",
+  "name": "Graph fractions as decimals on number lines"
+ },
+ {
+  "subject": "Math",
+  "category": "Decimals",
+  "code": "6P7",
+  "name": "Convert fractions and mixed numbers to decimals - denominators of 10 and 100"
+ },
+ {
+  "subject": "Math",
+  "category": "Decimals",
+  "code": "DBF",
+  "name": "Convert decimals to fractions and mixed numbers"
+ },
+ {
+  "subject": "Math",
+  "category": "Decimals",
+  "code": "EAL",
+  "name": "Compare money amounts"
+ },
+ {
+  "subject": "Math",
+  "category": "Decimals",
+  "code": "CV7",
+  "name": "Compare decimals using models"
+ },
+ {
+  "subject": "Math",
+  "category": "Decimals",
+  "code": "T2W",
+  "name": "Compare decimals on number lines"
+ },
+ {
+  "subject": "Math",
+  "category": "Decimals",
+  "code": "DY5",
+  "name": "Compare decimal numbers"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement & Unit Conversions",
+  "code": "YYA",
+  "name": "Which customary unit is appropriate?"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement & Unit Conversions",
+  "code": "A89",
+  "name": "Convert and compare customary units of length"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement & Unit Conversions",
+  "code": "LJV",
+  "name": "Convert and compare customary units of weight"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement & Unit Conversions",
+  "code": "GAA",
+  "name": "Convert and compare customary units of volume"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement & Unit Conversions",
+  "code": "DRM",
+  "name": "Convert and compare customary units"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement & Unit Conversions",
+  "code": "U95",
+  "name": "Convert mixed customary units"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement & Unit Conversions",
+  "code": "FPM",
+  "name": "Which metric unit is appropriate?"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement & Unit Conversions",
+  "code": "GZM",
+  "name": "Convert and compare metric units of length"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement & Unit Conversions",
+  "code": "7RC",
+  "name": "Convert and compare metric units of mass"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement & Unit Conversions",
+  "code": "FHV",
+  "name": "Convert and compare metric units of volume"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement & Unit Conversions",
+  "code": "UL5",
+  "name": "Convert and compare metric units"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement & Unit Conversions",
+  "code": "YP2",
+  "name": "Convert mixed metric units"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement & Unit Conversions",
+  "code": "PS8",
+  "name": "Convert time units: hours, minutes, and seconds"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement & Unit Conversions",
+  "code": "QDA",
+  "name": "Convert units of time"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement, Time & Money Word Problems",
+  "code": "8U7",
+  "name": "Compare customary units by multiplying"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement, Time & Money Word Problems",
+  "code": "2PY",
+  "name": "Measurement word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement, Time & Money Word Problems",
+  "code": "UST",
+  "name": "Measurement word problems with fractions"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement, Time & Money Word Problems",
+  "code": "KXC",
+  "name": "Multi-step measurement problems with conversions"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement, Time & Money Word Problems",
+  "code": "VCC",
+  "name": "Elapsed time: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement, Time & Money Word Problems",
+  "code": "ZQP",
+  "name": "Find start and end times: multi-step word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Measurement, Time & Money Word Problems",
+  "code": "2D5",
+  "name": "Add and subtract money amounts: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Area & Perimeter",
+  "code": "KGJ",
+  "name": "Find the perimeter of rectangles using formulas"
+ },
+ {
+  "subject": "Math",
+  "category": "Area & Perimeter",
+  "code": "GBE",
+  "name": "Perimeter: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Area & Perimeter",
+  "code": "JBF",
+  "name": "Find the area of rectangles using formulas"
+ },
+ {
+  "subject": "Math",
+  "category": "Area & Perimeter",
+  "code": "9E6",
+  "name": "Find the area or missing side length of a rectangle"
+ },
+ {
+  "subject": "Math",
+  "category": "Area & Perimeter",
+  "code": "JW7",
+  "name": "Area: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Area & Perimeter",
+  "code": "GY2",
+  "name": "Area between two rectangles"
+ },
+ {
+  "subject": "Math",
+  "category": "Area & Perimeter",
+  "code": "S7Y",
+  "name": "Compare area and perimeter of rectangles and squares"
+ },
+ {
+  "subject": "Math",
+  "category": "Area & Perimeter",
+  "code": "SKK",
+  "name": "Relationship between area and perimeter"
+ },
+ {
+  "subject": "Math",
+  "category": "Area & Perimeter",
+  "code": "LTP",
+  "name": "Area and perimeter: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Area & Perimeter",
+  "code": "HWY",
+  "name": "Area and perimeter of complex figures: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Area & Perimeter",
+  "code": "5CZ",
+  "name": "Solve problems involving the area and perimeter of rectangles"
+ },
+ {
+  "subject": "Math",
+  "category": "Area & Perimeter",
+  "code": "S9M",
+  "name": "Rectangles: relationship between perimeter and area word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Area & Perimeter",
+  "code": "5GF",
+  "name": "Use area and perimeter to determine cost"
+ },
+ {
+  "subject": "Math",
+  "category": "Line Plots",
+  "code": "QQB",
+  "name": "Create and interpret line plots with fractions"
+ },
+ {
+  "subject": "Math",
+  "category": "Line Plots",
+  "code": "JVG",
+  "name": "Interpret line plots with fractions: multi-step problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Angles",
+  "code": "N72",
+  "name": "Angles as fractions of a circle"
+ },
+ {
+  "subject": "Math",
+  "category": "Angles",
+  "code": "Q68",
+  "name": "Use fractions to find the measure of an angle"
+ },
+ {
+  "subject": "Math",
+  "category": "Angles",
+  "code": "UQV",
+  "name": "Angles of 90, 180, 270, and 360 degrees"
+ },
+ {
+  "subject": "Math",
+  "category": "Angles",
+  "code": "RK8",
+  "name": "Measure angles on a circle"
+ },
+ {
+  "subject": "Math",
+  "category": "Angles",
+  "code": "LUJ",
+  "name": "Estimate angle measurements"
+ },
+ {
+  "subject": "Math",
+  "category": "Angles",
+  "code": "NCN",
+  "name": "Measure angles with a protractor"
+ },
+ {
+  "subject": "Math",
+  "category": "Angles",
+  "code": "R9K",
+  "name": "Draw angles with a protractor"
+ },
+ {
+  "subject": "Math",
+  "category": "Angles",
+  "code": "VJY",
+  "name": "Adjacent angles"
+ },
+ {
+  "subject": "Math",
+  "category": "Angles",
+  "code": "YUA",
+  "name": "Angle measures: word problems"
+ },
+ {
+  "subject": "Math",
+  "category": "Angles",
+  "code": "MBL",
+  "name": "Solve problems involving angle measures"
+ },
+ {
+  "subject": "Math",
+  "category": "Geometry: Lines, Shapes & Symmetry",
+  "code": "8VQ",
+  "name": "Parallel, perpendicular, and intersecting lines"
+ },
+ {
+  "subject": "Math",
+  "category": "Geometry: Lines, Shapes & Symmetry",
+  "code": "DSU",
+  "name": "Identify parallel, perpendicular, and intersecting lines"
+ },
+ {
+  "subject": "Math",
+  "category": "Geometry: Lines, Shapes & Symmetry",
+  "code": "58M",
+  "name": "Parallel sides in quadrilaterals"
+ },
+ {
+  "subject": "Math",
+  "category": "Geometry: Lines, Shapes & Symmetry",
+  "code": "9MK",
+  "name": "Points, lines, line segments, rays, and angles"
+ },
+ {
+  "subject": "Math",
+  "category": "Geometry: Lines, Shapes & Symmetry",
+  "code": "R5K",
+  "name": "Acute, right, obtuse, and straight angles"
+ },
+ {
+  "subject": "Math",
+  "category": "Geometry: Lines, Shapes & Symmetry",
+  "code": "67D",
+  "name": "Sides and angles in polygons"
+ },
+ {
+  "subject": "Math",
+  "category": "Geometry: Lines, Shapes & Symmetry",
+  "code": "7QK",
+  "name": "Acute, obtuse, and right triangles"
+ },
+ {
+  "subject": "Math",
+  "category": "Geometry: Lines, Shapes & Symmetry",
+  "code": "5UV",
+  "name": "Scalene, isosceles, and equilateral triangles"
+ },
+ {
+  "subject": "Math",
+  "category": "Geometry: Lines, Shapes & Symmetry",
+  "code": "U59",
+  "name": "Classify triangles"
+ },
+ {
+  "subject": "Math",
+  "category": "Geometry: Lines, Shapes & Symmetry",
+  "code": "PTK",
+  "name": "Sides and angles of quadrilaterals"
+ },
+ {
+  "subject": "Math",
+  "category": "Geometry: Lines, Shapes & Symmetry",
+  "code": "A6V",
+  "name": "Classify quadrilaterals"
+ },
+ {
+  "subject": "Math",
+  "category": "Geometry: Lines, Shapes & Symmetry",
+  "code": "6CT",
+  "name": "Pick all the names for a quadrilateral"
+ },
+ {
+  "subject": "Math",
+  "category": "Geometry: Lines, Shapes & Symmetry",
+  "code": "TND",
+  "name": "Name quadrilaterals more than one way"
+ },
+ {
+  "subject": "Math",
+  "category": "Geometry: Lines, Shapes & Symmetry",
+  "code": "9FD",
+  "name": "Identify lines of symmetry"
+ },
+ {
+  "subject": "Math",
+  "category": "Geometry: Lines, Shapes & Symmetry",
+  "code": "SQF",
+  "name": "Draw lines of symmetry"
+ },
+ {
+  "subject": "Math",
+  "category": "Geometry: Lines, Shapes & Symmetry",
+  "code": "MWS",
+  "name": "Count lines of symmetry"
+ },
+ {
+  "subject": "ELA",
+  "category": "Literature: Story Elements & Characters",
+  "code": "UB2",
+  "name": "Draw inferences from a text"
+ },
+ {
+  "subject": "ELA",
+  "category": "Literature: Story Elements & Characters",
+  "code": "SCC",
+  "name": "Draw inferences and identify supporting details"
+ },
+ {
+  "subject": "ELA",
+  "category": "Literature: Story Elements & Characters",
+  "code": "TXS",
+  "name": "Make predictions about a story"
+ },
+ {
+  "subject": "ELA",
+  "category": "Literature: Story Elements & Characters",
+  "code": "SRQ",
+  "name": "Identify story elements"
+ },
+ {
+  "subject": "ELA",
+  "category": "Literature: Story Elements & Characters",
+  "code": "6ML",
+  "name": "Analyze plot elements"
+ },
+ {
+  "subject": "ELA",
+  "category": "Literature: Story Elements & Characters",
+  "code": "VVG",
+  "name": "Identify supporting details in literary texts"
+ },
+ {
+  "subject": "ELA",
+  "category": "Literature: Story Elements & Characters",
+  "code": "CXM",
+  "name": "Use actions and dialogue to understand characters"
+ },
+ {
+  "subject": "ELA",
+  "category": "Literature: Story Elements & Characters",
+  "code": "GYD",
+  "name": "Compare and contrast characters"
+ },
+ {
+  "subject": "ELA",
+  "category": "Literature: Story Elements & Characters",
+  "code": "XY2",
+  "name": "Show character emotions and traits"
+ },
+ {
+  "subject": "ELA",
+  "category": "Literature: Story Elements & Characters",
+  "code": "LGA",
+  "name": "Distinguish points of view"
+ },
+ {
+  "subject": "ELA",
+  "category": "Literature: Story Elements & Characters",
+  "code": "EBK",
+  "name": "Identify the narrative point of view"
+ },
+ {
+  "subject": "ELA",
+  "category": "Literature: Theme & Summary",
+  "code": "6PW",
+  "name": "Determine the themes of myths, fables, and folktales"
+ },
+ {
+  "subject": "ELA",
+  "category": "Literature: Theme & Summary",
+  "code": "L7J",
+  "name": "Determine the themes of short stories"
+ },
+ {
+  "subject": "ELA",
+  "category": "Literature: Theme & Summary",
+  "code": "E9T",
+  "name": "Identify the author's purpose and message"
+ },
+ {
+  "subject": "ELA",
+  "category": "Literature: Theme & Summary",
+  "code": "XZF",
+  "name": "Summarize a story"
+ },
+ {
+  "subject": "ELA",
+  "category": "Literature: Poetry, Drama & Illustrations",
+  "code": "AQU",
+  "name": "Label the rhyme scheme"
+ },
+ {
+  "subject": "ELA",
+  "category": "Literature: Poetry, Drama & Illustrations",
+  "code": "9FU",
+  "name": "Identify elements of poetry"
+ },
+ {
+  "subject": "ELA",
+  "category": "Literature: Poetry, Drama & Illustrations",
+  "code": "J5P",
+  "name": "Compare mythological illustrations"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reading Practice: Literature Passages",
+  "code": "26L",
+  "name": "Read fantasy with illustrations"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reading Practice: Literature Passages",
+  "code": "2BC",
+  "name": "Read realistic fiction with illustrations"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reading Practice: Literature Passages",
+  "code": "DFJ",
+  "name": "Read science fiction with illustrations"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reading Practice: Literature Passages",
+  "code": "A7Z",
+  "name": "Read realistic fiction"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reading Practice: Literature Passages",
+  "code": "59R",
+  "name": "Read historical fiction"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reading Practice: Literature Passages",
+  "code": "TMW",
+  "name": "Read poetry"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reading Practice: Literature Passages",
+  "code": "KJP",
+  "name": "Read drama"
+ },
+ {
+  "subject": "ELA",
+  "category": "Informational: Text Structure & Details",
+  "code": "99D",
+  "name": "Determine the order of events in informational texts"
+ },
+ {
+  "subject": "ELA",
+  "category": "Informational: Text Structure & Details",
+  "code": "YBU",
+  "name": "Compare and contrast in informational texts"
+ },
+ {
+  "subject": "ELA",
+  "category": "Informational: Text Structure & Details",
+  "code": "Z9L",
+  "name": "Match causes and effects in informational texts"
+ },
+ {
+  "subject": "ELA",
+  "category": "Informational: Text Structure & Details",
+  "code": "F2B",
+  "name": "Match problems with their solutions"
+ },
+ {
+  "subject": "ELA",
+  "category": "Informational: Text Structure & Details",
+  "code": "8CJ",
+  "name": "Compare information from two texts"
+ },
+ {
+  "subject": "ELA",
+  "category": "Informational: Text Structure & Details",
+  "code": "8MJ",
+  "name": "Identify supporting details in informational texts"
+ },
+ {
+  "subject": "ELA",
+  "category": "Informational: Text Structure & Details",
+  "code": "HR6",
+  "name": "Identify and analyze text structures"
+ },
+ {
+  "subject": "ELA",
+  "category": "Informational: Text Structure & Details",
+  "code": "5C9",
+  "name": "Analyze argumentative texts"
+ },
+ {
+  "subject": "ELA",
+  "category": "Informational: Main Idea & Purpose",
+  "code": "DMM",
+  "name": "Use key details to determine the main idea"
+ },
+ {
+  "subject": "ELA",
+  "category": "Informational: Main Idea & Purpose",
+  "code": "7XV",
+  "name": "Determine the main idea of a passage"
+ },
+ {
+  "subject": "ELA",
+  "category": "Informational: Main Idea & Purpose",
+  "code": "VVF",
+  "name": "Identify and analyze the main idea of a passage"
+ },
+ {
+  "subject": "ELA",
+  "category": "Informational: Main Idea & Purpose",
+  "code": "6RR",
+  "name": "Identify the purpose of a text"
+ },
+ {
+  "subject": "ELA",
+  "category": "Informational: Text Features & Combining Sources",
+  "code": "DH7",
+  "name": "Read graphic organizers"
+ },
+ {
+  "subject": "ELA",
+  "category": "Informational: Text Features & Combining Sources",
+  "code": "MW8",
+  "name": "Select and use text features"
+ },
+ {
+  "subject": "ELA",
+  "category": "Informational: Text Features & Combining Sources",
+  "code": "JZ2",
+  "name": "Combine main ideas from two texts"
+ },
+ {
+  "subject": "ELA",
+  "category": "Informational: Text Features & Combining Sources",
+  "code": "6GA",
+  "name": "Organize information by topic"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reading Practice: Informational Passages",
+  "code": "7TG",
+  "name": "Read about animals"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reading Practice: Informational Passages",
+  "code": "ZSE",
+  "name": "Read about art, music, and traditions"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reading Practice: Informational Passages",
+  "code": "EM5",
+  "name": "Read about famous places"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reading Practice: Informational Passages",
+  "code": "8V8",
+  "name": "Read about sports and hobbies"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reading Practice: Informational Passages",
+  "code": "8SC",
+  "name": "Read about famous people"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reading Practice: Informational Passages",
+  "code": "MZT",
+  "name": "Read about business and technology"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reading Practice: Informational Passages",
+  "code": "RTC",
+  "name": "Read about science and nature"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reading Practice: Informational Passages",
+  "code": "ZB2",
+  "name": "Read about history"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Context Clues & Multiple Meanings",
+  "code": "LT5",
+  "name": "Find words using context"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Context Clues & Multiple Meanings",
+  "code": "WDU",
+  "name": "Determine the meaning of words using synonyms in context"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Context Clues & Multiple Meanings",
+  "code": "DC8",
+  "name": "Use context to identify the meaning of a word"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Context Clues & Multiple Meanings",
+  "code": "QQC",
+  "name": "Use academic vocabulary in context"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Context Clues & Multiple Meanings",
+  "code": "K7J",
+  "name": "Determine the meaning of domain-specific words with pictures"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Context Clues & Multiple Meanings",
+  "code": "RQT",
+  "name": "Find synonyms in context"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Context Clues & Multiple Meanings",
+  "code": "BTA",
+  "name": "Find antonyms in context"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Context Clues & Multiple Meanings",
+  "code": "6DS",
+  "name": "Which definition matches the sentence?"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Context Clues & Multiple Meanings",
+  "code": "VBG",
+  "name": "Which sentence matches the definition?"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Figurative Language & Idioms",
+  "code": "8YE",
+  "name": "Similes and metaphors with pictures"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Figurative Language & Idioms",
+  "code": "F7J",
+  "name": "Determine the meanings of similes and metaphors"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Figurative Language & Idioms",
+  "code": "PV6",
+  "name": "Interpret the meaning of an allusion from its source"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Figurative Language & Idioms",
+  "code": "WMF",
+  "name": "Analyze the effects of figures of speech on meaning and tone"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Figurative Language & Idioms",
+  "code": "JMD",
+  "name": "Determine the meaning of idioms from context: set 1"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Figurative Language & Idioms",
+  "code": "PFB",
+  "name": "Determine the meaning of idioms from context: set 2"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Figurative Language & Idioms",
+  "code": "A72",
+  "name": "Identify the meaning of idioms and adages: set 1"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Figurative Language & Idioms",
+  "code": "KNW",
+  "name": "Identify the meaning of idioms and adages: set 2"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Synonyms, Antonyms & Word Choice",
+  "code": "7XU",
+  "name": "Choose the synonym"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Synonyms, Antonyms & Word Choice",
+  "code": "QLF",
+  "name": "Choose the antonym"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Synonyms, Antonyms & Word Choice",
+  "code": "B6G",
+  "name": "Which sentence has the same meaning?"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Synonyms, Antonyms & Word Choice",
+  "code": "TJ6",
+  "name": "Which sentence uses an antonym?"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Synonyms, Antonyms & Word Choice",
+  "code": "N5T",
+  "name": "Use thesaurus entries"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Synonyms, Antonyms & Word Choice",
+  "code": "TWK",
+  "name": "Shades of meaning with pictures"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Synonyms, Antonyms & Word Choice",
+  "code": "78V",
+  "name": "Describe the difference between related words"
+ },
+ {
+  "subject": "ELA",
+  "category": "Vocabulary: Synonyms, Antonyms & Word Choice",
+  "code": "ZEA",
+  "name": "Positive and negative connotation"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reference Skills (Alphabetizing & Dictionary)",
+  "code": "9K2",
+  "name": "Order alphabetically based on the first letter"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reference Skills (Alphabetizing & Dictionary)",
+  "code": "MCJ",
+  "name": "Order alphabetically based on the first two letters"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reference Skills (Alphabetizing & Dictionary)",
+  "code": "5WL",
+  "name": "Order alphabetically based on the first three letters"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reference Skills (Alphabetizing & Dictionary)",
+  "code": "NPW",
+  "name": "Order alphabetically: challenge"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reference Skills (Alphabetizing & Dictionary)",
+  "code": "AJ5",
+  "name": "Use guide words"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reference Skills (Alphabetizing & Dictionary)",
+  "code": "K7L",
+  "name": "Use dictionary entries"
+ },
+ {
+  "subject": "ELA",
+  "category": "Reference Skills (Alphabetizing & Dictionary)",
+  "code": "KXN",
+  "name": "Use dictionary definitions"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Prefixes & Suffixes",
+  "code": "VSQ",
+  "name": "Determine the meaning of a word with pre-, re-, or mis-"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Prefixes & Suffixes",
+  "code": "F6D",
+  "name": "Use the prefixes pre-, re-, and mis-"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Prefixes & Suffixes",
+  "code": "8SP",
+  "name": "Words with un-, dis-, in-, im-, and non-"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Prefixes & Suffixes",
+  "code": "VDR",
+  "name": "Determine the meaning of a word with -ful or -less"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Prefixes & Suffixes",
+  "code": "J58",
+  "name": "Determine the meaning of a word with -ly or -ness"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Prefixes & Suffixes",
+  "code": "YZB",
+  "name": "Determine the meaning of a word with -able or -ment"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Prefixes & Suffixes",
+  "code": "XFL",
+  "name": "Determine the meaning of a word with a suffix: review"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Prefixes & Suffixes",
+  "code": "HQJ",
+  "name": "Sort words with shared suffixes by part of speech"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Prefixes & Suffixes",
+  "code": "2AW",
+  "name": "Segment and read words with affixes"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Prefixes & Suffixes",
+  "code": "F7T",
+  "name": "Identify base words, prefixes, and suffixes"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Prefixes & Suffixes",
+  "code": "VZH",
+  "name": "Determine the meanings of words with prefixes and suffixes: review"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Prefixes & Suffixes",
+  "code": "8GB",
+  "name": "Sort words with shared prefixes and suffixes by meaning"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Greek & Latin Roots",
+  "code": "G7R",
+  "name": "Sort words by shared Greek or Latin roots"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Greek & Latin Roots",
+  "code": "XNX",
+  "name": "Use Greek and Latin roots as clues to the meanings of words"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Greek & Latin Roots",
+  "code": "49S",
+  "name": "Use the meanings of words as clues to the meanings of Greek and Latin roots"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Greek & Latin Roots",
+  "code": "FCL",
+  "name": "Determine the meanings of Greek and Latin roots"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Greek & Latin Roots",
+  "code": "BJ9",
+  "name": "Determine the meanings of words with Greek and Latin roots"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Greek & Latin Roots",
+  "code": "TS8",
+  "name": "Match words with Greek and Latin roots to their meanings"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Greek & Latin Roots",
+  "code": "CZR",
+  "name": "Use words with roots and affixes"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Compound, Multisyllabic & Word Patterns",
+  "code": "SN5",
+  "name": "Word pattern analogies"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Compound, Multisyllabic & Word Patterns",
+  "code": "GSW",
+  "name": "Word pattern sentences"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Compound, Multisyllabic & Word Patterns",
+  "code": "WRS",
+  "name": "Form compound words with pictures"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Compound, Multisyllabic & Word Patterns",
+  "code": "JSG",
+  "name": "Form compound words"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Compound, Multisyllabic & Word Patterns",
+  "code": "JX5",
+  "name": "Form and use compound words"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Compound, Multisyllabic & Word Patterns",
+  "code": "M8F",
+  "name": "Segment multisyllabic words"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Compound, Multisyllabic & Word Patterns",
+  "code": "5F6",
+  "name": "Read multisyllabic words"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Compound, Multisyllabic & Word Patterns",
+  "code": "XVS",
+  "name": "Complete the sentence with the multisyllabic word"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Compound, Multisyllabic & Word Patterns",
+  "code": "UUV",
+  "name": "Identify syllable types"
+ },
+ {
+  "subject": "ELA",
+  "category": "Word Study: Compound, Multisyllabic & Word Patterns",
+  "code": "N84",
+  "name": "Is the syllable open or closed?"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Opinion & Supporting Reasons",
+  "code": "C9W",
+  "name": "Identify an author's statement of opinion"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Opinion & Supporting Reasons",
+  "code": "96L",
+  "name": "Distinguish facts from opinions"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Opinion & Supporting Reasons",
+  "code": "HW7",
+  "name": "Choose reasons to support an opinion"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Paragraph Organization",
+  "code": "2ER",
+  "name": "Order items from most general to most specific"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Paragraph Organization",
+  "code": "82A",
+  "name": "Remove the sentence that does not belong"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Paragraph Organization",
+  "code": "C5Z",
+  "name": "Choose the best topic sentence"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Paragraph Organization",
+  "code": "68D",
+  "name": "Choose the best concluding sentence"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Paragraph Organization",
+  "code": "DXR",
+  "name": "Put the sentences in order"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Paragraph Organization",
+  "code": "TMH",
+  "name": "Identify and correct plagiarism"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Transitions & Linking Words",
+  "code": "F79",
+  "name": "Use coordinating conjunctions"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Transitions & Linking Words",
+  "code": "27D",
+  "name": "Use subordinating conjunctions"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Transitions & Linking Words",
+  "code": "YMU",
+  "name": "Choose the best transition"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Transitions & Linking Words",
+  "code": "QWR",
+  "name": "Identify time-order words"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Transitions & Linking Words",
+  "code": "XS7",
+  "name": "Use the correct pair of correlative conjunctions"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Transitions & Linking Words",
+  "code": "XHT",
+  "name": "Use linking words in paragraphs"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Descriptive Details",
+  "code": "UZ9",
+  "name": "Sort sensory details"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Descriptive Details",
+  "code": "FFK",
+  "name": "Identify sensory details"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Descriptive Details",
+  "code": "6BY",
+  "name": "Add imagery to stories"
+ },
+ {
+  "subject": "ELA",
+  "category": "Writing: Descriptive Details",
+  "code": "HXU",
+  "name": "Revise the sentence using a stronger verb"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Sentence Structure",
+  "code": "L7P",
+  "name": "Is it a complete sentence or a fragment?"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Sentence Structure",
+  "code": "AUH",
+  "name": "Is it a complete sentence or a run-on?"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Sentence Structure",
+  "code": "X9V",
+  "name": "Is it a complete sentence, a fragment, or a run-on?"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Sentence Structure",
+  "code": "JSA",
+  "name": "Create varied sentences based on models"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Sentence Structure",
+  "code": "7M3",
+  "name": "Identify the complete subject of a sentence"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Sentence Structure",
+  "code": "U6M",
+  "name": "Identify the complete predicate of a sentence"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Sentence Structure",
+  "code": "A5R",
+  "name": "Identify the simple subject or predicate of a sentence"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Sentence Structure",
+  "code": "ACF",
+  "name": "Order the words to create a sentence"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Sentence Structure",
+  "code": "EV2",
+  "name": "Is the sentence simple or compound?"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Sentence Structure",
+  "code": "XA7",
+  "name": "Create compound sentences"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Pronouns, Verbs, Adjectives & Prepositions",
+  "code": "7HQ",
+  "name": "Identify relative pronouns"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Pronouns, Verbs, Adjectives & Prepositions",
+  "code": "BMC",
+  "name": "Use relative pronouns: who and whom"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Pronouns, Verbs, Adjectives & Prepositions",
+  "code": "5AY",
+  "name": "Use relative pronouns: who, whom, whose, which, and that"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Pronouns, Verbs, Adjectives & Prepositions",
+  "code": "PJV",
+  "name": "Use relative adverbs"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Pronouns, Verbs, Adjectives & Prepositions",
+  "code": "QNP",
+  "name": "Use the progressive verb tenses"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Pronouns, Verbs, Adjectives & Prepositions",
+  "code": "SXQ",
+  "name": "Form the progressive verb tenses"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Pronouns, Verbs, Adjectives & Prepositions",
+  "code": "B9S",
+  "name": "What does the modal verb show?"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Pronouns, Verbs, Adjectives & Prepositions",
+  "code": "6HX",
+  "name": "Use the correct modal verb"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Pronouns, Verbs, Adjectives & Prepositions",
+  "code": "57U",
+  "name": "Order adjectives"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Pronouns, Verbs, Adjectives & Prepositions",
+  "code": "Y6S",
+  "name": "Identify prepositional phrases"
+ },
+ {
+  "subject": "ELA",
+  "category": "Grammar: Pronouns, Verbs, Adjectives & Prepositions",
+  "code": "ZJL",
+  "name": "Prepositions: review"
+ },
+ {
+  "subject": "ELA",
+  "category": "Punctuation",
+  "code": "D54",
+  "name": "Correct errors with signs"
+ },
+ {
+  "subject": "ELA",
+  "category": "Punctuation",
+  "code": "5CP",
+  "name": "Commas with a series"
+ },
+ {
+  "subject": "ELA",
+  "category": "Punctuation",
+  "code": "DLJ",
+  "name": "Commas with dates"
+ },
+ {
+  "subject": "ELA",
+  "category": "Punctuation",
+  "code": "ALN",
+  "name": "Commas with the names of places"
+ },
+ {
+  "subject": "ELA",
+  "category": "Punctuation",
+  "code": "5PV",
+  "name": "Commas with direct addresses"
+ },
+ {
+  "subject": "ELA",
+  "category": "Punctuation",
+  "code": "74G",
+  "name": "Commas with introductory words and phrases"
+ },
+ {
+  "subject": "ELA",
+  "category": "Punctuation",
+  "code": "UNT",
+  "name": "Commas: review"
+ },
+ {
+  "subject": "ELA",
+  "category": "Punctuation",
+  "code": "ECG",
+  "name": "Punctuating dialogue"
+ },
+ {
+  "subject": "ELA",
+  "category": "Capitalization",
+  "code": "HNY",
+  "name": "Capitalizing the names of people and pets and titles of respect"
+ },
+ {
+  "subject": "ELA",
+  "category": "Capitalization",
+  "code": "2RN",
+  "name": "Capitalizing days, months, and holidays"
+ },
+ {
+  "subject": "ELA",
+  "category": "Capitalization",
+  "code": "G2S",
+  "name": "Capitalizing the names of places and geographic features"
+ },
+ {
+  "subject": "ELA",
+  "category": "Capitalization",
+  "code": "L77",
+  "name": "Capitalizing the names of historical events, periods, and documents"
+ },
+ {
+  "subject": "ELA",
+  "category": "Capitalization",
+  "code": "G83",
+  "name": "Capitalizing proper adjectives, nationalities, and languages"
+ },
+ {
+  "subject": "ELA",
+  "category": "Capitalization",
+  "code": "58V",
+  "name": "Capitalization: review"
+ },
+ {
+  "subject": "ELA",
+  "category": "Capitalization",
+  "code": "JCE",
+  "name": "Capitalizing titles"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Plurals & Possessives",
+  "code": "RKT",
+  "name": "Form regular plurals with -s, -es, and -ies"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Plurals & Possessives",
+  "code": "68P",
+  "name": "Use regular plurals with -s, -es, and -ies"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Plurals & Possessives",
+  "code": "5VG",
+  "name": "Form regular plurals with -s, -es, -ies, and -ves"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Plurals & Possessives",
+  "code": "FJN",
+  "name": "Use regular plurals with -s, -es, -ies, and -ves"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Plurals & Possessives",
+  "code": "9QM",
+  "name": "Form and use irregular plurals"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Plurals & Possessives",
+  "code": "WUG",
+  "name": "Is the noun singular or plural?"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Plurals & Possessives",
+  "code": "BRH",
+  "name": "Form the singular or plural possessive"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Plurals & Possessives",
+  "code": "WMN",
+  "name": "Identify and correct errors with plural and possessive nouns"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Past Tense Verbs",
+  "code": "PQP",
+  "name": "Identify verbs in the regular past tense"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Past Tense Verbs",
+  "code": "FPR",
+  "name": "Complete the verb with the ending that you hear"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Past Tense Verbs",
+  "code": "29B",
+  "name": "Form and use the regular past tense"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Past Tense Verbs",
+  "code": "Q9P",
+  "name": "Form and use the irregular past tense: set 1"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Past Tense Verbs",
+  "code": "H6N",
+  "name": "Form and use the irregular past tense: set 2"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Past Tense Verbs",
+  "code": "49P",
+  "name": "Form and use the irregular past tense: set 3"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Past Tense Verbs",
+  "code": "MYG",
+  "name": "Form and use the irregular past tense: set 4"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Common Words, Affixes & Sight Words",
+  "code": "E7S",
+  "name": "Learn to spell words with prefixes: dis-, mis-, pre-"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Common Words, Affixes & Sight Words",
+  "code": "BR2",
+  "name": "Learn to spell words with suffixes: -able, -ish, -ment"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Common Words, Affixes & Sight Words",
+  "code": "WPS",
+  "name": "Spell words with affixes: review"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Common Words, Affixes & Sight Words",
+  "code": "5AS",
+  "name": "Learn to spell common words: set 1"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Common Words, Affixes & Sight Words",
+  "code": "L89",
+  "name": "Learn to spell common words: set 2"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Common Words, Affixes & Sight Words",
+  "code": "KYL",
+  "name": "Spell common words: sets 1 and 2"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Common Words, Affixes & Sight Words",
+  "code": "LM7",
+  "name": "Learn to spell common words: set 3"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Common Words, Affixes & Sight Words",
+  "code": "UCC",
+  "name": "Learn to spell common words: set 4"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Common Words, Affixes & Sight Words",
+  "code": "WMB",
+  "name": "Spell common words: sets 3 and 4"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Common Words, Affixes & Sight Words",
+  "code": "B9D",
+  "name": "Spell common words: review sets 1-4"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Common Words, Affixes & Sight Words",
+  "code": "VZF",
+  "name": "Spell multisyllabic words"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Common Words, Affixes & Sight Words",
+  "code": "FHP",
+  "name": "Read and spell sight words"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Common Words, Affixes & Sight Words",
+  "code": "Z7H",
+  "name": "Complete the sentence with the correct sight word"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Homophones, Contractions & Comparatives",
+  "code": "YE5",
+  "name": "Homophones with pictures"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Homophones, Contractions & Comparatives",
+  "code": "ZR5",
+  "name": "Identify homophones"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Homophones, Contractions & Comparatives",
+  "code": "6YG",
+  "name": "Match homophones to their meanings"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Homophones, Contractions & Comparatives",
+  "code": "S8L",
+  "name": "Use the correct homophone"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Homophones, Contractions & Comparatives",
+  "code": "U8T",
+  "name": "Pronoun-verb contractions"
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Homophones, Contractions & Comparatives",
+  "code": "XNV",
+  "name": "Contractions with \"not\""
+ },
+ {
+  "subject": "ELA",
+  "category": "Spelling: Homophones, Contractions & Comparatives",
+  "code": "WA9",
+  "name": "Spell adjectives that compare"
+ }
+]

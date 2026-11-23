@@ -17,6 +17,12 @@ html { color-scheme: light; }
   --math-soft: #E3E8FD;
   --ela: #A82D63;
   --ela-soft: #F9DFEA;
+  --sci: #0B6E78;
+  --sci-soft: #D6F0F2;
+  --soc: #8A5200;
+  --soc-soft: #FBE9C6;
+  --read: #6A3FA3;
+  --read-soft: #EADCF9;
   --done: #2E9E78;
   --done-soft: #D8F2E8;
   --warn: #A24710;
@@ -28,13 +34,22 @@ html { color-scheme: light; }
   --font-body: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #1B1530; --surface: #271F42; --surface-2: #322958; --ink: #F1EAFB; --muted: #B1A5CC;
     --line: #3D3363; --accent: #F29A57; --accent-ink: #1B1530; --math: #9EAEFF; --math-soft: #2B3366;
-    --ela: #FF9AC1; --ela-soft: #4A2540; --done: #55D3A4; --done-soft: #1E4A3E; --warn: #FFB27A;
+    --ela: #FF9AC1; --ela-soft: #4A2540; --sci: #6FD6DF; --sci-soft: #1B4448; --soc: #F2C26B; --soc-soft: #4A3A18;
+    --read: #C9A6F5; --read-soft: #3E2D5E; --done: #55D3A4; --done-soft: #1E4A3E; --warn: #FFB27A;
     --warn-soft: #4A3020; --fur: #F0A45D; --fur-dark: #CF7A33; --ear: #D98FA2;
     color-scheme: dark;
   }
+}
+:root[data-theme="dark"] {
+  --bg: #1B1530; --surface: #271F42; --surface-2: #322958; --ink: #F1EAFB; --muted: #B1A5CC;
+  --line: #3D3363; --accent: #F29A57; --accent-ink: #1B1530; --math: #9EAEFF; --math-soft: #2B3366;
+  --ela: #FF9AC1; --ela-soft: #4A2540; --sci: #6FD6DF; --sci-soft: #1B4448; --soc: #F2C26B; --soc-soft: #4A3A18;
+  --read: #C9A6F5; --read-soft: #3E2D5E; --done: #55D3A4; --done-soft: #1E4A3E; --warn: #FFB27A;
+  --warn-soft: #4A3020; --fur: #F0A45D; --fur-dark: #CF7A33; --ear: #D98FA2;
+  color-scheme: dark;
 }
 * { box-sizing: border-box; }
 body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.45; }
@@ -75,6 +90,9 @@ main { display: grid; gap: 16px; margin-top: 18px; }
 .subj h3 { font-size: 1.15rem; padding: 2px 12px; border-radius: 999px; }
 .subj.math h3 { background: var(--math-soft); color: var(--math); }
 .subj.ela h3 { background: var(--ela-soft); color: var(--ela); }
+.subj.sci h3 { background: var(--sci-soft); color: var(--sci); }
+.subj.soc h3 { background: var(--soc-soft); color: var(--soc); }
+.subj.read h3 { background: var(--read-soft); color: var(--read); }
 .subj .focus { color: var(--muted); font-weight: 700; font-size: .88rem; flex: 1 1 200px; min-width: 0; }
 .subj .cnt { font-weight: 800; color: var(--muted); font-variant-numeric: tabular-nums; }
 
@@ -127,6 +145,9 @@ details.ahead .subj { border: 0; padding: 4px 0 0; }
 .sublabel { font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; margin-top: 8px; }
 .sublabel.math { color: var(--math); }
 .sublabel.ela { color: var(--ela); }
+.sublabel.sci { color: var(--sci); }
+.sublabel.soc { color: var(--soc); }
+.sublabel.read { color: var(--read); }
 .daycard footer { margin-top: auto; padding: 4px 0 6px; }
 
 .foot { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between; color: var(--muted); font-size: .88rem; font-weight: 600; }

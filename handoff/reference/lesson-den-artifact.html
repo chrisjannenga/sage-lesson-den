@@ -1,0 +1,523 @@
+<title>Sage's Lesson Den</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: one centered column, a hero card for today, tabs for Today / Catch-up / Week.
+   Cat theme: tabby-orange cat mascot, paw-print check boxes, a cat that walks along the progress bar. */
+:root {
+  --bg: #F4EFFA;
+  --surface: #FFFFFF;
+  --surface-2: #EDE6F7;
+  --ink: #2D2340;
+  --muted: #6B5F82;
+  --line: #DDD3EC;
+  --accent: #E9803A;
+  --accent-ink: #2D2340;
+  --math: #3B4FC4;
+  --math-soft: #E3E8FD;
+  --ela: #A82D63;
+  --ela-soft: #F9DFEA;
+  --sci: #0B6E78;
+  --sci-soft: #D6F0F2;
+  --soc: #8A5200;
+  --soc-soft: #FBE9C6;
+  --read: #6A3FA3;
+  --read-soft: #EADCF9;
+  --done: #2E9E78;
+  --done-soft: #D8F2E8;
+  --warn: #A24710;
+  --warn-soft: #FDE8D8;
+  --fur: #F0A45D;
+  --fur-dark: #CF7A33;
+  --ear: #F4B8C5;
+  --font-display: "Fredoka", "Trebuchet MS", system-ui, sans-serif;
+  --font-body: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1B1530; --surface: #271F42; --surface-2: #322958; --ink: #F1EAFB; --muted: #B1A5CC;
+    --line: #3D3363; --accent: #F29A57; --accent-ink: #1B1530; --math: #9EAEFF; --math-soft: #2B3366;
+    --ela: #FF9AC1; --ela-soft: #4A2540; --sci: #6FD6DF; --sci-soft: #1B4448; --soc: #F2C26B; --soc-soft: #4A3A18; --read: #C9A6F5; --read-soft: #3E2D5E; --done: #55D3A4; --done-soft: #1E4A3E; --warn: #FFB27A;
+    --warn-soft: #4A3020; --fur: #F0A45D; --fur-dark: #CF7A33; --ear: #D98FA2;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1B1530; --surface: #271F42; --surface-2: #322958; --ink: #F1EAFB; --muted: #B1A5CC;
+  --line: #3D3363; --accent: #F29A57; --accent-ink: #1B1530; --math: #9EAEFF; --math-soft: #2B3366;
+  --ela: #FF9AC1; --ela-soft: #4A2540; --sci: #6FD6DF; --sci-soft: #1B4448; --soc: #F2C26B; --soc-soft: #4A3A18; --read: #C9A6F5; --read-soft: #3E2D5E; --done: #55D3A4; --done-soft: #1E4A3E; --warn: #FFB27A;
+  --warn-soft: #4A3020; --fur: #F0A45D; --fur-dark: #CF7A33; --ear: #D98FA2;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.45; }
+.wrap { max-width: 980px; margin: 0 auto; padding-inline: 16px; padding-block: 18px 40px; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; margin: 0; text-wrap: balance; }
+button { font: inherit; color: inherit; cursor: pointer; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+.top { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; justify-content: space-between; }
+.brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.brand svg { width: 52px; height: 47px; flex: none; }
+.brand h1 { font-size: 1.7rem; line-height: 1.1; }
+.brand .date { color: var(--muted); font-weight: 600; font-size: .95rem; }
+.tabs { display: flex; gap: 6px; background: var(--surface-2); padding: 5px; border-radius: 999px; }
+.tab { border: 0; background: transparent; padding: 8px 16px; border-radius: 999px; font-weight: 700; color: var(--muted); display: flex; gap: 8px; align-items: center; }
+.tab[aria-selected="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 3px rgba(45,35,64,.18); }
+.badge { background: var(--accent); color: var(--accent-ink); border-radius: 999px; font-size: .78rem; padding: 1px 8px; font-weight: 800; }
+
+main { display: grid; gap: 16px; margin-top: 18px; }
+
+.hero { background: var(--surface); border: 2px solid var(--line); border-radius: 22px; padding: 18px; display: grid; grid-template-columns: 104px 1fr; gap: 16px; align-items: center; }
+.hero .mascot svg { width: 104px; height: 94px; display: block; }
+.hero h2 { font-size: 1.5rem; }
+.hero .sub { color: var(--muted); font-weight: 600; margin-top: 2px; }
+.bar { position: relative; height: 16px; background: var(--surface-2); border-radius: 999px; margin: 22px 0 6px; }
+.bar > .fill { height: 100%; background: var(--done); border-radius: 999px; transition: width .35s ease; min-width: 16px; }
+.bar > .walker { position: absolute; top: -17px; width: 36px; height: 32px; transform: translateX(-50%); transition: left .35s ease; pointer-events: none; }
+.bar > .walker svg { width: 100%; height: 100%; display: block; }
+.stat { font-weight: 800; font-size: .95rem; }
+.ok-note { color: var(--done); font-weight: 800; }
+
+.notice { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; background: var(--warn-soft); color: var(--warn); border-radius: 16px; padding: 12px 16px; font-weight: 700; }
+.pill-btn { border: 2px solid currentColor; background: transparent; border-radius: 999px; padding: 6px 14px; font-weight: 800; }
+.pill-btn:hover { background: var(--surface); }
+
+.subj { background: var(--surface); border: 2px solid var(--line); border-radius: 20px; padding: 14px 14px 8px; min-width: 0; }
+.subj > header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-bottom: 6px; }
+.subj h3 { font-size: 1.15rem; padding: 2px 12px; border-radius: 999px; }
+.subj.math h3 { background: var(--math-soft); color: var(--math); }
+.subj.ela h3 { background: var(--ela-soft); color: var(--ela); }
+.subj.sci h3 { background: var(--sci-soft); color: var(--sci); }
+.subj.soc h3 { background: var(--soc-soft); color: var(--soc); }
+.subj.read h3 { background: var(--read-soft); color: var(--read); }
+.subj .focus { color: var(--muted); font-weight: 700; font-size: .88rem; flex: 1 1 200px; min-width: 0; }
+.subj .cnt { font-weight: 800; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.lesson { display: flex; align-items: flex-start; gap: 12px; padding: 10px 6px; border-top: 1px dashed var(--line); cursor: pointer; position: relative; }
+.lesson:first-of-type { border-top: 0; }
+.lesson input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.paw { flex: none; width: 34px; height: 34px; border-radius: 11px; border: 2.5px solid var(--line); background: var(--surface); display: grid; place-items: center; transition: background .15s, border-color .15s; }
+.paw svg { width: 22px; height: 22px; fill: var(--line); }
+.lesson:hover .paw { border-color: var(--accent); }
+.lesson input:checked + .paw { background: var(--done); border-color: var(--done); }
+.lesson input:checked + .paw svg { fill: #fff; }
+.lesson input:focus-visible + .paw { outline: 3px solid var(--accent); outline-offset: 2px; }
+.ltxt { display: flex; flex-direction: column; gap: 2px; min-width: 0; padding-top: 3px; }
+.lname { font-weight: 700; overflow-wrap: anywhere; }
+.code { font-size: .78rem; font-weight: 800; letter-spacing: .06em; color: var(--muted); }
+.lesson.is-done .lname { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--done); text-decoration-thickness: 2px; }
+
+details.ahead { background: var(--surface); border: 2px dashed var(--line); border-radius: 20px; padding: 6px 14px 10px; }
+details.ahead > summary { cursor: pointer; font-weight: 800; padding: 8px 0; font-family: var(--font-display); font-size: 1.05rem; }
+details.ahead .subj { border: 0; padding: 4px 0 0; }
+
+.empty { background: var(--surface); border: 2px dashed var(--line); border-radius: 20px; padding: 28px 18px; text-align: center; color: var(--muted); font-weight: 700; display: grid; gap: 10px; justify-items: center; }
+.empty svg { width: 90px; height: 81px; }
+.empty h2 { color: var(--ink); font-size: 1.3rem; }
+
+.dayhead { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; justify-content: space-between; margin: 6px 2px 8px; }
+.dayhead h2 { font-size: 1.2rem; }
+.dayhead .meta { color: var(--muted); font-weight: 700; font-size: .9rem; }
+.linklike { border: 0; background: transparent; color: var(--accent); font-weight: 800; padding: 4px 2px; text-decoration: underline; text-underline-offset: 3px; }
+:root { --link: var(--ink); }
+
+.weekbar { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; justify-content: space-between; }
+.weekbar h2 { font-size: 1.3rem; }
+.nav { display: flex; gap: 6px; }
+.nav button { border: 2px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 14px; font-weight: 800; }
+.nav button:hover { border-color: var(--accent); }
+.weekgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 14px; }
+.daycard { background: var(--surface); border: 2px solid var(--line); border-radius: 20px; padding: 12px 12px 6px; min-width: 0; display: flex; flex-direction: column; }
+.daycard.today { border-color: var(--accent); }
+.daycard.off { background: transparent; border-style: dashed; color: var(--muted); }
+.daycard header { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline; justify-content: space-between; margin-bottom: 4px; }
+.daycard h3 { font-size: 1.05rem; }
+.tag { font-size: .75rem; font-weight: 800; border-radius: 999px; padding: 1px 9px; }
+.tag.today { background: var(--accent); color: var(--accent-ink); }
+.tag.missed { background: var(--warn-soft); color: var(--warn); }
+.tag.done { background: var(--done-soft); color: var(--done); }
+.daycard .lesson { padding: 7px 2px; gap: 10px; }
+.daycard .paw { width: 28px; height: 28px; border-radius: 9px; }
+.daycard .paw svg { width: 18px; height: 18px; }
+.daycard .lname { font-size: .92rem; }
+.sublabel { font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; margin-top: 8px; }
+.sublabel.math { color: var(--math); }
+.sublabel.ela { color: var(--ela); }
+.sublabel.sci { color: var(--sci); }
+.sublabel.soc { color: var(--soc); }
+.sublabel.read { color: var(--read); }
+.daycard footer { margin-top: auto; padding: 4px 0 6px; }
+
+.foot { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between; color: var(--muted); font-size: .88rem; font-weight: 600; }
+.foot a { color: var(--ink); font-weight: 800; }
+.hero.cheer .mascot svg { animation: hop .6s ease 2; }
+@keyframes hop { 0%,100% { transform: translateY(0); } 40% { transform: translateY(-12px) rotate(-4deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .hero.cheer .mascot svg { animation: none; }
+  .bar > .fill, .bar > .walker { transition: none; }
+}
+@media (max-width: 520px) {
+  .hero { grid-template-columns: 76px 1fr; padding: 14px; gap: 12px; }
+  .hero .mascot svg { width: 76px; height: 68px; }
+  .brand h1 { font-size: 1.4rem; }
+  .tab { padding: 8px 12px; }
+  .tabs { width: 100%; justify-content: space-between; }
+  .tab { flex: 1; justify-content: center; }
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="paw" viewBox="0 0 24 24">
+      <ellipse cx="5.2" cy="11" rx="2.2" ry="2.9" transform="rotate(-18 5.2 11)"/>
+      <ellipse cx="9.6" cy="6.2" rx="2.2" ry="3" transform="rotate(-6 9.6 6.2)"/>
+      <ellipse cx="14.4" cy="6.2" rx="2.2" ry="3" transform="rotate(6 14.4 6.2)"/>
+      <ellipse cx="18.8" cy="11" rx="2.2" ry="2.9" transform="rotate(18 18.8 11)"/>
+      <path d="M12 12.2c-3.6 0-6.4 3.1-6.4 5.6 0 2 1.7 2.8 3.4 2.6 1.1-.1 1.9-.5 3-.5s1.9.4 3 .5c1.7.2 3.4-.6 3.4-2.6 0-2.5-2.8-5.6-6.4-5.6z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <div class="top">
+    <div class="brand">
+      <span id="logo"></span>
+      <div>
+        <h1>Sage's Lesson Den</h1>
+        <div class="date" id="today-label"></div>
+      </div>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Views">
+      <button class="tab" role="tab" data-tab="today" id="tab-today">Today</button>
+      <button class="tab" role="tab" data-tab="catchup" id="tab-catchup">Catch-up <span class="badge" id="missed-badge" hidden></span></button>
+      <button class="tab" role="tab" data-tab="week" id="tab-week">Week</button>
+    </div>
+  </div>
+  <main id="app" aria-live="polite"></main>
+  <div class="foot">
+    <span id="sync-note"></span>
+    <span>Open IXL:
+      <a href="https://www.ixl.com/math/skill-plans/arizona-mathematics-standards-grade-4" target="_blank" rel="noopener">Math skill plan</a> ·
+      <a href="https://www.ixl.com/ela/skill-plans/arizona-english-language-arts-standards-grade-4" target="_blank" rel="noopener">Language Arts skill plan</a> ·
+      <a href="https://www.ixl.com/science/skill-plans/arizona-science-standards-grade-4" target="_blank" rel="noopener">Science</a> ·
+      <a href="https://www.ixl.com/social-studies/grade-4" target="_blank" rel="noopener">Social Studies</a>
+    </span>
+  </div>
+</div>
+
+<script>
+const DAYS = [{"d":"2026-11-23","n":1,"w":"Mon","m":[["Z47","Place value word problems","Place Value & Number Names"],["WGL","Estimate products: word problems","Rounding & Estimating"]],"e":[["KJP","Read drama","Reading Practice: Literature Passages"],["DC8","Use context to identify the meaning of a word","Vocabulary: Context Clues & Multiple Meanings"]],"s":[],"h":[["native-people-of-the-southwest","Native people of the Southwest","Native peoples of North America"]],"r":[["read-2026-11-23","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2026-11-24","n":2,"w":"Tue","m":[["2FS","Divide by 1-digit numbers: pick the better estimate","Rounding & Estimating"],["CRD","Estimate sums, differences, products, and quotients: word problems","Rounding & Estimating"]],"e":[["PV6","Interpret the meaning of an allusion from its source","Vocabulary: Figurative Language & Idioms"]],"s":[],"h":[["native-people-of-the-pacific-northwest","Native people of the Pacific Northwest","Native peoples of North America"],["native-people-of-california","Native people of California","Native peoples of North America"]],"r":[["read-2026-11-24","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2026-11-24","Weekly writing: write and submit something for your book report. Retell what happened in the chapters you read, in your own words.","Weekly writing"]]},{"d":"2026-11-30","n":3,"w":"Mon","m":[["RG2","Add two multi-digit numbers","Add & Subtract Multi-Digit Numbers"],["ZPY","Add two multi-digit numbers: word problems","Add & Subtract Multi-Digit Numbers"]],"e":[["PFB","Determine the meaning of idioms from context: set 2","Vocabulary: Figurative Language & Idioms"],["EM5","Read about famous places","Reading Practice: Informational Passages"]],"s":[],"h":[["jamestown-the-early-years","Jamestown: the early years","Early English colonies in North America"]],"r":[["read-2026-11-30","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2026-12-01","n":4,"w":"Tue","m":[["D9R","Properties of addition","Add & Subtract Multi-Digit Numbers"],["ZMC","Add 3 or more numbers up to millions","Add & Subtract Multi-Digit Numbers"]],"e":[["8V8","Read about sports and hobbies","Reading Practice: Informational Passages"]],"s":[["RBM","Identify magnets that attract or repel","Magnets & Electricity"]],"h":[["jamestown-growth-of-a-colony","Jamestown: growth of a colony","Early English colonies in North America"]],"r":[["read-2026-12-01","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2026-12-02","n":5,"w":"Wed","m":[["VQH","Addition: fill in the missing digits","Add & Subtract Multi-Digit Numbers"]],"e":[["8SC","Read about famous people","Reading Practice: Informational Passages"]],"s":[],"h":[["plymouth","Plymouth","Early English colonies in North America"]],"r":[["read-2026-12-02","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2026-12-03","n":6,"w":"Thu","m":[["P5U","Choose numbers with a particular sum","Add & Subtract Multi-Digit Numbers"]],"e":[["MZT","Read about business and technology","Reading Practice: Informational Passages"]],"s":[],"h":[["new-england-colonies-religion-and-government","New England colonies: religion and government","The Thirteen Colonies"]],"r":[["read-2026-12-03","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2026-12-04","n":7,"w":"Fri","m":[["VP2","Subtract two multi-digit numbers","Add & Subtract Multi-Digit Numbers"],["R9N","Subtract two multi-digit numbers: word problems","Add & Subtract Multi-Digit Numbers"]],"e":[["RTC","Read about science and nature","Reading Practice: Informational Passages"],["ZB2","Read about history","Reading Practice: Informational Passages"]],"s":[],"h":[["new-england-colonies-economy-and-conflict","New England colonies: economy and conflict","The Thirteen Colonies"]],"r":[["read-2026-12-04","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2026-12-04","Weekly writing: write and submit something for your book report. Pick a character. What do they want, and what is getting in their way?","Weekly writing"]]},{"d":"2026-12-07","n":8,"w":"Mon","m":[["UXK","Subtraction: fill in the missing digits","Add & Subtract Multi-Digit Numbers"],["XEV","Choose numbers with a particular difference","Add & Subtract Multi-Digit Numbers"]],"e":[["DMM","Use key details to determine the main idea","Informational: Main Idea & Purpose"],["7XV","Determine the main idea of a passage","Informational: Main Idea & Purpose"]],"s":[],"h":[["middle-colonies-founding-and-government","Middle colonies: founding and government","The Thirteen Colonies"]],"r":[["read-2026-12-07","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2026-12-08","n":9,"w":"Tue","m":[["WEG","Add and subtract numbers ending in zeros","Add & Subtract Multi-Digit Numbers"],["RJJ","Comparison word problems with addition and subtraction","Add & Subtract Multi-Digit Numbers"]],"e":[["VVF","Identify and analyze the main idea of a passage","Informational: Main Idea & Purpose"]],"s":[["TAY","Label magnets that attract or repel","Magnets & Electricity"]],"h":[["middle-colonies-economy-and-society","Middle colonies: economy and society","The Thirteen Colonies"]],"r":[["read-2026-12-08","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2026-12-09","n":10,"w":"Wed","m":[["FW9","Multiplication facts to 12","Multiplication: Facts & 1-Digit Factors"]],"e":[["6RR","Identify the purpose of a text","Informational: Main Idea & Purpose"]],"s":[],"h":[["southern-colonies-founding-and-government","Southern colonies: founding and government","The Thirteen Colonies"]],"r":[["read-2026-12-09","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2026-12-10","n":11,"w":"Thu","m":[["W6D","Use one multiplication fact to complete another","Multiplication: Facts & 1-Digit Factors"],["8UH","Multiply 1-digit numbers by teen numbers using grids","Multiplication: Facts & 1-Digit Factors"]],"e":[["DH7","Read graphic organizers","Informational: Text Features & Combining Sources"]],"s":[],"h":[["southern-colonies-economy-and-slavery","Southern colonies: economy and slavery","The Thirteen Colonies"]],"r":[["read-2026-12-10","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2026-12-11","n":12,"w":"Fri","m":[["VCM","Multiply 1-digit numbers by 2-digit numbers: choose the area model","Multiplication: Facts & 1-Digit Factors"]],"e":[["MW8","Select and use text features","Informational: Text Features & Combining Sources"],["JZ2","Combine main ideas from two texts","Informational: Text Features & Combining Sources"]],"s":[],"h":[["identify-the-thirteen-colonies","Identify the Thirteen Colonies","The Thirteen Colonies"],["select-the-thirteen-colonies","Select the Thirteen Colonies","The Thirteen Colonies"]],"r":[["read-2026-12-11","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2026-12-11","Weekly writing: write and submit something for your book report. Predict what will happen next, and give two clues from the book that support it.","Weekly writing"]]},{"d":"2026-12-14","n":13,"w":"Mon","m":[["HZX","Multiply 1-digit numbers by 2-digit numbers using area models","Multiplication: Facts & 1-Digit Factors"],["RP9","Multiply 1-digit numbers by 3-digit or 4-digit numbers: choose the area model","Multiplication: Facts & 1-Digit Factors"],["WKL","Multiply 1-digit numbers by 3-digit or 4-digit numbers using area models","Multiplication: Facts & 1-Digit Factors"]],"e":[["6GA","Organize information by topic","Informational: Text Features & Combining Sources"]],"s":[],"h":[["name-the-thirteen-colonies","Name the Thirteen Colonies","The Thirteen Colonies"]],"r":[["read-2026-12-14","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2026-12-15","n":14,"w":"Tue","m":[["GDW","Multiply 1-digit numbers by 2-digit numbers","Multiplication: Facts & 1-Digit Factors"]],"e":[["VSQ","Determine the meaning of a word with pre-, re-, or mis-","Word Study: Prefixes & Suffixes"],["F6D","Use the prefixes pre-, re-, and mis-","Word Study: Prefixes & Suffixes"]],"s":[["ZCE","Compare strengths of magnetic forces","Magnets & Electricity"]],"h":[["the-american-revolution-the-thirteen-colonies-under-british-rule","The American Revolution: the Thirteen Colonies under British rule","The American Revolution"]],"r":[["read-2026-12-15","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2026-12-16","n":15,"w":"Wed","m":[["UR9","Multiply 1-digit numbers by 2-digit numbers: word problems","Multiplication: Facts & 1-Digit Factors"]],"e":[["8SP","Words with un-, dis-, in-, im-, and non-","Word Study: Prefixes & Suffixes"]],"s":[],"h":[["the-american-revolution-new-british-taxes","The American Revolution: New British taxes","The American Revolution"]],"r":[["read-2026-12-16","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2026-12-17","n":16,"w":"Thu","m":[["SEG","Multiply 1-digit numbers by 3-digit or 4-digit numbers using expanded form","Multiplication: Facts & 1-Digit Factors"],["23C","Multiply 1-digit numbers by multi-digit numbers using partial products","Multiplication: Facts & 1-Digit Factors"]],"e":[["VDR","Determine the meaning of a word with -ful or -less","Word Study: Prefixes & Suffixes"]],"s":[],"h":[],"r":[["read-2026-12-17","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2026-12-17","Weekly writing: write and submit something for your book report. Describe your favorite scene so well that someone who has not read it can picture it.","Weekly writing"],["report-2026-12","Submit your December book report","Monthly book report"]]},{"d":"2027-01-04","n":17,"w":"Mon","m":[["PPM","Multiply 1-digit numbers by 3-digit or 4-digit numbers","Multiplication: Facts & 1-Digit Factors"],["AQ6","Multiply 1-digit numbers by 3-digit or 4-digit numbers: word problems","Multiplication: Facts & 1-Digit Factors"]],"e":[["J58","Determine the meaning of a word with -ly or -ness","Word Study: Prefixes & Suffixes"]],"s":[],"h":[["the-american-revolution-the-boston-tea-party","The American Revolution: the Boston Tea Party","The American Revolution"],["the-american-revolution-the-rebellion-begins","The American Revolution: the rebellion begins","The American Revolution"]],"r":[["read-2027-01-04","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-01-05","n":18,"w":"Tue","m":[["ASZ","Multiply 2-digit numbers by 2-digit numbers: choose the area model","Multiplication: 2-Digit Factors"],["8K7","Multiply 2-digit numbers by 2-digit numbers using area models","Multiplication: 2-Digit Factors"]],"e":[["YZB","Determine the meaning of a word with -able or -ment","Word Study: Prefixes & Suffixes"],["XFL","Determine the meaning of a word with a suffix: review","Word Study: Prefixes & Suffixes"]],"s":[],"h":[["the-american-revolution-preparing-for-war","The American Revolution: preparing for war","The American Revolution"]],"r":[["read-2027-01-05","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-01-06","n":19,"w":"Wed","m":[["ERB","Box multiplication","Multiplication: 2-Digit Factors"]],"e":[["HQJ","Sort words with shared suffixes by part of speech","Word Study: Prefixes & Suffixes"]],"s":[["MC7","Introduction to static electricity and charged objects","Magnets & Electricity"]],"h":[["the-american-revolution-struggle-for-independence","The American Revolution: struggle for independence","The American Revolution"]],"r":[["read-2027-01-06","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-01-07","n":20,"w":"Thu","m":[["LBW","Lattice multiplication","Multiplication: 2-Digit Factors"]],"e":[["2AW","Segment and read words with affixes","Word Study: Prefixes & Suffixes"]],"s":[],"h":[["the-american-revolution-turning-the-tide-of-the-war","The American Revolution: turning the tide of the war","The American Revolution"]],"r":[["read-2027-01-07","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-01-08","n":21,"w":"Fri","m":[["XLZ","Multiply 2-digit numbers by 2-digit numbers using partial products","Multiplication: 2-Digit Factors"],["XQ8","Multiply a 2-digit number by a 2-digit number: complete the missing steps","Multiplication: 2-Digit Factors"]],"e":[["F7T","Identify base words, prefixes, and suffixes","Word Study: Prefixes & Suffixes"],["VZH","Determine the meanings of words with prefixes and suffixes: review","Word Study: Prefixes & Suffixes"]],"s":[],"h":[["the-american-revolution-conclusion-and-aftermath","The American Revolution: conclusion and aftermath","The American Revolution"]],"r":[["read-2027-01-08","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-01-08","Weekly writing: write and submit something for your book report. Find a new or tricky word. Write what it means and use it in a sentence.","Weekly writing"]]},{"d":"2027-01-11","n":22,"w":"Mon","m":[["MLC","Multiply a 2-digit number by a 2-digit number","Multiplication: 2-Digit Factors"],["GZG","Multiply a 2-digit number by a 2-digit number: word problems","Multiplication: 2-Digit Factors"]],"e":[["8GB","Sort words with shared prefixes and suffixes by meaning","Word Study: Prefixes & Suffixes"]],"s":[],"h":[["the-louisiana-purchase","The Louisiana Purchase","Early 19th-century American history"],["the-lewis-and-clark-expedition","The Lewis and Clark Expedition","Early 19th-century American history"]],"r":[["read-2027-01-11","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-01-12","n":23,"w":"Tue","m":[["Y5K","Multiplication patterns over increasing place values","Multiplication: Strategies & Properties"],["7NS","Multiply by multiples of ten","Multiplication: Strategies & Properties"]],"e":[["G7R","Sort words by shared Greek or Latin roots","Word Study: Greek & Latin Roots"],["XNX","Use Greek and Latin roots as clues to the meanings of words","Word Study: Greek & Latin Roots"]],"s":[],"h":[["the-war-of-1812-causes","The War of 1812: causes","Early 19th-century American history"]],"r":[["read-2027-01-12","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-01-13","n":24,"w":"Wed","m":[["K98","Multiply two multiples of ten: word problems","Multiplication: Strategies & Properties"]],"e":[["49S","Use the meanings of words as clues to the meanings of Greek and Latin roots","Word Study: Greek & Latin Roots"]],"s":[],"h":[["the-war-of-1812-events-and-effects","The War of 1812: events and effects","Early 19th-century American history"]],"r":[["read-2027-01-13","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-01-14","n":25,"w":"Thu","m":[["B6N","Properties of multiplication","Multiplication: Strategies & Properties"],["US7","Distributive property: find the missing factor","Multiplication: Strategies & Properties"]],"e":[["FCL","Determine the meanings of Greek and Latin roots","Word Study: Greek & Latin Roots"]],"s":[],"h":[["antebellum-period-economies-of-the-north-and-south","Antebellum Period: economies of the North and South","Early 19th-century American history"]],"r":[["read-2027-01-14","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-01-15","n":26,"w":"Fri","m":[["LXG","Multiply using the distributive property","Multiplication: Strategies & Properties"]],"e":[["BJ9","Determine the meanings of words with Greek and Latin roots","Word Study: Greek & Latin Roots"],["TS8","Match words with Greek and Latin roots to their meanings","Word Study: Greek & Latin Roots"]],"s":[],"h":[["antebellum-period-abolitionist-and-proslavery-perspectives","Antebellum Period: abolitionist and proslavery perspectives","Early 19th-century American history"]],"r":[["read-2027-01-15","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-01-15","Weekly writing: write and submit something for your book report. Compare two cats in the story: how are they alike and how are they different?","Weekly writing"]]},{"d":"2027-01-19","n":27,"w":"Tue","m":[["MYU","Choose numbers with a particular quotient","Division Basics"],["M49","Divide 2-digit numbers by 1-digit numbers using arrays","Division Basics"]],"e":[["CZR","Use words with roots and affixes","Word Study: Greek & Latin Roots"]],"s":[["B6A","Electric circuits","Magnets & Electricity"]],"h":[["antebellum-period-slavery-and-politics-part-i","Antebellum Period: slavery and politics part I","Early 19th-century American history"]],"r":[["read-2027-01-19","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-01-20","n":28,"w":"Wed","m":[["7LG","Divide 2-digit numbers by 1-digit numbers using area models","Division Basics"],["UFM","Divide 2-digit numbers by 1-digit numbers: complete the table","Division Basics"]],"e":[["SN5","Word pattern analogies","Word Study: Compound, Multisyllabic & Word Patterns"]],"s":[],"h":[["antebellum-period-slavery-and-politics-part-ii","Antebellum Period: slavery and politics part II","Early 19th-century American history"]],"r":[["read-2027-01-20","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-01-21","n":29,"w":"Thu","m":[["QMT","Divide 2-digit numbers by 1-digit numbers: word problems","Division Basics"]],"e":[["GSW","Word pattern sentences","Word Study: Compound, Multisyllabic & Word Patterns"]],"s":[],"h":[["the-civil-war-the-beginning-of-the-war","The Civil War: the beginning of the war","The Civil War and Reconstruction"]],"r":[["read-2027-01-21","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-01-22","n":30,"w":"Fri","m":[["XD2","Divide 2-digit numbers by 1-digit numbers","Division Basics"],["6UL","Divide 3-digit numbers by 1-digit numbers using area models","Division Basics"]],"e":[["WRS","Form compound words with pictures","Word Study: Compound, Multisyllabic & Word Patterns"],["JSG","Form compound words","Word Study: Compound, Multisyllabic & Word Patterns"]],"s":[],"h":[["the-civil-war-the-first-battle-of-bull-run-to-gettysburg","The Civil War: the First Battle of Bull Run to Gettysburg","The Civil War and Reconstruction"]],"r":[["read-2027-01-22","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-01-22","Weekly writing: write and submit something for your book report. Write about a choice a character made. Would you have done the same? Why?","Weekly writing"]]},{"d":"2027-01-25","n":31,"w":"Mon","m":[["YQL","Divide using partial quotients","Division Basics"],["EGL","Divide using partial quotients with remainders","Division Basics"]],"e":[["JX5","Form and use compound words","Word Study: Compound, Multisyllabic & Word Patterns"],["M8F","Segment multisyllabic words","Word Study: Compound, Multisyllabic & Word Patterns"]],"s":[],"h":[["the-civil-war-war-tactics-and-the-home-front","The Civil War: war tactics and the home front","The Civil War and Reconstruction"]],"r":[["read-2027-01-25","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-01-26","n":32,"w":"Tue","m":[["DKK","Divide larger numbers by 1-digit numbers: word problems","Division Basics"],["X86","Divide larger numbers by 1-digit numbers","Division Basics"]],"e":[["5F6","Read multisyllabic words","Word Study: Compound, Multisyllabic & Word Patterns"]],"s":[],"h":[["the-civil-war-the-end-of-the-war","The Civil War: the end of the war","The Civil War and Reconstruction"],["reconstruction","Reconstruction","The Civil War and Reconstruction"]],"r":[["read-2027-01-26","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-01-27","n":33,"w":"Wed","m":[["2UB","Divide larger numbers by 1-digit numbers: complete the table","Division Basics"]],"e":[["XVS","Complete the sentence with the multisyllabic word","Word Study: Compound, Multisyllabic & Word Patterns"]],"s":[["MCA","Natural energy resources: coal and wind","Energy Resources"]],"h":[],"r":[["read-2027-01-27","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-01-28","n":34,"w":"Thu","m":[["Z5Y","Division patterns over increasing place values","Division: Strategies & Properties"],["2K3","Divide numbers ending in zeros by 1-digit numbers","Division: Strategies & Properties"]],"e":[["UUV","Identify syllable types","Word Study: Compound, Multisyllabic & Word Patterns"]],"s":[],"h":[["world-war-i-the-road-to-war","World War I: the road to war","World War I"]],"r":[["read-2027-01-28","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-01-29","n":35,"w":"Fri","m":[["6J4","Divide numbers ending in zeros by 1-digit numbers: word problems","Division: Strategies & Properties"]],"e":[["N84","Is the syllable open or closed?","Word Study: Compound, Multisyllabic & Word Patterns"],["PQP","Identify verbs in the regular past tense","Spelling: Past Tense Verbs"]],"s":[],"h":[["world-war-i-the-war-begins","World War I: the war begins","World War I"],["world-war-i-events-of-the-war","World War I: events of the war","World War I"]],"r":[["read-2027-01-29","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-01-29","Weekly writing: write and submit something for your book report. Describe the setting. What does the Clan's territory look and feel like?","Weekly writing"],["report-2027-01","Submit your January book report","Monthly book report"]]},{"d":"2027-02-01","n":36,"w":"Mon","m":[["LAK","Properties of division","Division: Strategies & Properties"],["GDX","Divide using the distributive property","Division: Strategies & Properties"]],"e":[["FPR","Complete the verb with the ending that you hear","Spelling: Past Tense Verbs"]],"s":[],"h":[["world-war-i-the-road-to-peace","World War I: the road to peace","World War I"]],"r":[["read-2027-02-01","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-02-02","n":37,"w":"Tue","m":[["HYC","Find equivalent fractions using area models","Equivalent Fractions"],["CLW","Identify equivalent fractions using number lines","Equivalent Fractions"]],"e":[["29B","Form and use the regular past tense","Spelling: Past Tense Verbs"],["Q9P","Form and use the irregular past tense: set 1","Spelling: Past Tense Verbs"]],"s":[],"h":[["the-great-depression-part-i","The Great Depression: part I","The Great Depression"]],"r":[["read-2027-02-02","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-02-03","n":38,"w":"Wed","m":[["WQL","Graph equivalent fractions on number lines","Equivalent Fractions"]],"e":[["H6N","Form and use the irregular past tense: set 2","Spelling: Past Tense Verbs"]],"s":[["BNC","Evaluate natural energy sources","Energy Resources"]],"h":[["the-great-depression-part-ii","The Great Depression: part II","The Great Depression"]],"r":[["read-2027-02-03","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-02-04","n":39,"w":"Thu","m":[["K8C","Find equivalent fractions using multiplication and division","Equivalent Fractions"]],"e":[["49P","Form and use the irregular past tense: set 3","Spelling: Past Tense Verbs"]],"s":[],"h":[["the-new-deal","The New Deal","The Great Depression"]],"r":[["read-2027-02-04","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-02-05","n":40,"w":"Fri","m":[["GSG","Identify equivalent fractions","Equivalent Fractions"],["7CY","Equivalent fractions: find the missing numerator or denominator","Equivalent Fractions"],["VLP","Fractions with denominators of 10 and 100","Equivalent Fractions"]],"e":[["MYG","Form and use the irregular past tense: set 4","Spelling: Past Tense Verbs"]],"s":[],"h":[["world-war-ii-lead-up-to-war-in-europe-asia","World War II: lead-up to war in Europe, Asia","World War II"]],"r":[["read-2027-02-05","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-02-05","Weekly writing: write and submit something for your book report. Retell what happened in the chapters you read, in your own words.","Weekly writing"]]},{"d":"2027-02-08","n":41,"w":"Mon","m":[["7XF","Compare fractions using models","Comparing Fractions"],["LUS","Benchmark fractions","Comparing Fractions"]],"e":[["RKT","Form regular plurals with -s, -es, and -ies","Spelling: Plurals & Possessives"],["68P","Use regular plurals with -s, -es, and -ies","Spelling: Plurals & Possessives"]],"s":[],"h":[["world-war-ii-global-events","World War II: global events","World War II"]],"r":[["read-2027-02-08","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-02-09","n":42,"w":"Tue","m":[["EHJ","Compare fractions using benchmarks","Comparing Fractions"]],"e":[["5VG","Form regular plurals with -s, -es, -ies, and -ves","Spelling: Plurals & Possessives"],["FJN","Use regular plurals with -s, -es, -ies, and -ves","Spelling: Plurals & Possessives"]],"s":[],"h":[["read-a-map-cardinal-directions","Read a map: cardinal directions","Read maps"],["identify-lines-of-latitude-and-longitude","Identify lines of latitude and longitude","Read maps"]],"r":[["read-2027-02-09","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-02-10","n":43,"w":"Wed","m":[["UKZ","Compare fractions using benchmarks: find the missing numerator","Comparing Fractions"],["U2K","Compare fractions in recipes","Comparing Fractions"]],"e":[["9QM","Form and use irregular plurals","Spelling: Plurals & Possessives"]],"s":[],"h":[],"r":[["read-2027-02-10","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-02-11","n":44,"w":"Thu","m":[["99U","Compare fractions","Comparing Fractions"]],"e":[["WUG","Is the noun singular or plural?","Spelling: Plurals & Possessives"]],"s":[["R6N","Changes to Earth's surface: erosion","Earth's Surface & Fossils"]],"h":[["use-lines-of-latitude-and-longitude","Use lines of latitude and longitude","Read maps"]],"r":[["read-2027-02-11","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-02-12","n":45,"w":"Fri","m":[["Y5W","Add fractions with like denominators using area models","Adding & Subtracting Fractions"],["P99","Subtract fractions with like denominators using area models","Adding & Subtracting Fractions"]],"e":[["BRH","Form the singular or plural possessive","Spelling: Plurals & Possessives"]],"s":[],"h":[["identify-earths-land-features-using-photographs","Identify Earth's land features using photographs","Physical geography"],["identify-earths-land-features-using-satellite-images","Identify Earth's land features using satellite images","Physical geography"]],"r":[["read-2027-02-12","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-02-12","Weekly writing: write and submit something for your book report. Pick a character. What do they want, and what is getting in their way?","Weekly writing"]]},{"d":"2027-02-16","n":46,"w":"Tue","m":[["Z63","Add fractions with like denominators using strip models","Adding & Subtracting Fractions"],["QAS","Subtract fractions with like denominators using strip models","Adding & Subtracting Fractions"]],"e":[["WMN","Identify and correct errors with plural and possessive nouns","Spelling: Plurals & Possessives"]],"s":[],"h":[["identify-oceans-and-continents","Identify oceans and continents","Physical geography"]],"r":[["read-2027-02-16","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-02-17","n":47,"w":"Wed","m":[["6QH","Add fractions with like denominators using number lines","Adding & Subtracting Fractions"]],"e":[["E7S","Learn to spell words with prefixes: dis-, mis-, pre-","Spelling: Common Words, Affixes & Sight Words"],["BR2","Learn to spell words with suffixes: -able, -ish, -ment","Spelling: Common Words, Affixes & Sight Words"]],"s":[],"h":[["select-oceans-and-continents","Select oceans and continents","Physical geography"]],"r":[["read-2027-02-17","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-02-18","n":48,"w":"Thu","m":[["MJX","Subtract fractions with like denominators using number lines","Adding & Subtracting Fractions"]],"e":[["WPS","Spell words with affixes: review","Spelling: Common Words, Affixes & Sight Words"]],"s":[],"h":[["name-oceans-and-continents","Name oceans and continents","Physical geography"]],"r":[["read-2027-02-18","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-02-19","n":49,"w":"Fri","m":[["GAK","Add and subtract fractions with like denominators using number lines","Adding & Subtracting Fractions"],["PDU","Add fractions with like denominators","Adding & Subtracting Fractions"]],"e":[["5AS","Learn to spell common words: set 1","Spelling: Common Words, Affixes & Sight Words"],["L89","Learn to spell common words: set 2","Spelling: Common Words, Affixes & Sight Words"]],"s":[],"h":[["region-profile-the-northeast","Region profile: the Northeast","Regions of the United States"]],"r":[["read-2027-02-19","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-02-19","Weekly writing: write and submit something for your book report. Predict what will happen next, and give two clues from the book that support it.","Weekly writing"]]},{"d":"2027-02-22","n":50,"w":"Mon","m":[["AVF","Subtract fractions with like denominators","Adding & Subtracting Fractions"],["FXD","Add and subtract fractions with like denominators","Adding & Subtracting Fractions"]],"e":[["KYL","Spell common words: sets 1 and 2","Spelling: Common Words, Affixes & Sight Words"]],"s":[["XPW","Describe the geosphere, biosphere, hydrosphere, and atmosphere","Earth's Surface & Fossils"]],"h":[["region-profile-the-southeast","Region profile: the Southeast","Regions of the United States"]],"r":[["read-2027-02-22","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-02-23","n":51,"w":"Tue","m":[["QG2","Decompose fractions into unit fractions using models","Adding & Subtracting Fractions"],["XHG","Decompose fractions into unit fractions","Adding & Subtracting Fractions"]],"e":[["LM7","Learn to spell common words: set 3","Spelling: Common Words, Affixes & Sight Words"],["UCC","Learn to spell common words: set 4","Spelling: Common Words, Affixes & Sight Words"]],"s":[],"h":[["region-profile-the-great-lakes","Region profile: the Great Lakes","Regions of the United States"]],"r":[["read-2027-02-23","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-02-24","n":52,"w":"Wed","m":[["N2Z","Decompose fractions","Adding & Subtracting Fractions"]],"e":[["WMB","Spell common words: sets 3 and 4","Spelling: Common Words, Affixes & Sight Words"]],"s":[],"h":[["region-profile-the-plains","Region profile: the Plains","Regions of the United States"]],"r":[["read-2027-02-24","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-02-25","n":53,"w":"Thu","m":[["UEW","Decompose fractions multiple ways","Adding & Subtracting Fractions"],["WZN","Add and subtract mixed numbers with like denominators - without regrouping","Mixed Numbers & Fraction Word Problems"]],"e":[["B9D","Spell common words: review sets 1-4","Spelling: Common Words, Affixes & Sight Words"]],"s":[],"h":[["region-profile-the-rocky-mountains","Region profile: the Rocky Mountains","Regions of the United States"]],"r":[["read-2027-02-25","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-02-26","n":54,"w":"Fri","m":[["L9M","Add mixed numbers with like denominators","Mixed Numbers & Fraction Word Problems"],["SLQ","Subtract mixed numbers with like denominators","Mixed Numbers & Fraction Word Problems"]],"e":[["VZF","Spell multisyllabic words","Spelling: Common Words, Affixes & Sight Words"]],"s":[],"h":[["region-profile-the-southwest","Region profile: the Southwest","Regions of the United States"],["region-profile-the-far-west","Region profile: the Far West","Regions of the United States"]],"r":[["read-2027-02-26","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-02-26","Weekly writing: write and submit something for your book report. Describe your favorite scene so well that someone who has not read it can picture it.","Weekly writing"],["report-2027-02","Submit your February book report","Monthly book report"]]},{"d":"2027-03-01","n":55,"w":"Mon","m":[["9AS","Add and subtract mixed numbers with like denominators","Mixed Numbers & Fraction Word Problems"],["XBR","Add and subtract fractions with like denominators: word problems","Mixed Numbers & Fraction Word Problems"]],"e":[["FHP","Read and spell sight words","Spelling: Common Words, Affixes & Sight Words"],["Z7H","Complete the sentence with the correct sight word","Spelling: Common Words, Affixes & Sight Words"]],"s":[],"h":[["identify-states-of-the-west","Identify states of the West","States"]],"r":[["read-2027-03-01","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-03-02","n":56,"w":"Tue","m":[["LYR","Add and subtract fractions with like denominators in recipes","Mixed Numbers & Fraction Word Problems"],["5G5","Add and subtract fractions with like denominators: multi-step word problems","Mixed Numbers & Fraction Word Problems"]],"e":[["C9W","Identify an author's statement of opinion","Writing: Opinion & Supporting Reasons"]],"s":[],"h":[["select-states-of-the-west","Select states of the West","States"]],"r":[["read-2027-03-02","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-03-03","n":57,"w":"Wed","m":[["YB5","Add and subtract mixed numbers with like denominators in recipes","Mixed Numbers & Fraction Word Problems"]],"e":[["96L","Distinguish facts from opinions","Writing: Opinion & Supporting Reasons"]],"s":[["FAF","Interpret evidence from fossils in rock layers","Earth's Surface & Fossils"]],"h":[["name-states-of-the-west","Name states of the West","States"]],"r":[["read-2027-03-03","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-03-04","n":58,"w":"Thu","m":[["6KM","Add and subtract mixed numbers with like denominators: word problems","Mixed Numbers & Fraction Word Problems"]],"e":[["HW7","Choose reasons to support an opinion","Writing: Opinion & Supporting Reasons"],["F79","Use coordinating conjunctions","Writing: Transitions & Linking Words"]],"s":[],"h":[],"r":[["read-2027-03-04","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-03-05","n":59,"w":"Fri","m":[["PR2","Add and subtract fractions and mixed numbers with like denominators: multi-step word problems","Mixed Numbers & Fraction Word Problems"],["8J3","Multiply unit fractions by whole numbers using models","Multiplying Fractions by Whole Numbers"]],"e":[["27D","Use subordinating conjunctions","Writing: Transitions & Linking Words"]],"s":[],"h":[["identify-states-of-the-midwest","Identify states of the Midwest","States"],["select-states-of-the-midwest","Select states of the Midwest","States"]],"r":[["read-2027-03-05","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-03-05","Weekly writing: write and submit something for your book report. Find a new or tricky word. Write what it means and use it in a sentence.","Weekly writing"]]},{"d":"2027-03-15","n":60,"w":"Mon","m":[["XKJ","Multiply unit fractions by whole numbers using number lines","Multiplying Fractions by Whole Numbers"],["VYG","Multiples of unit fractions: find the missing numbers","Multiplying Fractions by Whole Numbers"]],"e":[["YMU","Choose the best transition","Writing: Transitions & Linking Words"],["QWR","Identify time-order words","Writing: Transitions & Linking Words"]],"s":[],"h":[["name-states-of-the-midwest","Name states of the Midwest","States"]],"r":[["read-2027-03-15","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-03-16","n":61,"w":"Tue","m":[["VGC","Multiply unit fractions by whole numbers: sorting","Multiplying Fractions by Whole Numbers"],["Y5C","Multiply fractions by whole numbers using models","Multiplying Fractions by Whole Numbers"]],"e":[["XS7","Use the correct pair of correlative conjunctions","Writing: Transitions & Linking Words"]],"s":[["UDY","Collect and graph temperature data","Weather & Climate"]],"h":[["identify-states-of-the-southeast","Identify states of the Southeast","States"]],"r":[["read-2027-03-16","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-03-17","n":62,"w":"Wed","m":[["CZ7","Multiply fractions by whole numbers using models: complete the equation","Multiplying Fractions by Whole Numbers"]],"e":[["XHT","Use linking words in paragraphs","Writing: Transitions & Linking Words"]],"s":[],"h":[["select-states-of-the-southeast","Select states of the Southeast","States"]],"r":[["read-2027-03-17","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-03-18","n":63,"w":"Thu","m":[["Q7B","Multiply fractions by whole numbers using number lines","Multiplying Fractions by Whole Numbers"],["EXQ","Multiply unit fractions by whole numbers","Multiplying Fractions by Whole Numbers"]],"e":[["2ER","Order items from most general to most specific","Writing: Paragraph Organization"]],"s":[],"h":[["name-states-of-the-southeast","Name states of the Southeast","States"]],"r":[["read-2027-03-18","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-03-19","n":64,"w":"Fri","m":[["RSY","Multiples of fractions: find the missing numbers","Multiplying Fractions by Whole Numbers"],["X48","Multiply fractions by whole numbers: sorting","Multiplying Fractions by Whole Numbers"]],"e":[["82A","Remove the sentence that does not belong","Writing: Paragraph Organization"],["C5Z","Choose the best topic sentence","Writing: Paragraph Organization"]],"s":[],"h":[["identify-states-of-the-northeast","Identify states of the Northeast","States"]],"r":[["read-2027-03-19","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-03-19","Weekly writing: write and submit something for your book report. Compare two cats in the story: how are they alike and how are they different?","Weekly writing"]]},{"d":"2027-03-22","n":65,"w":"Mon","m":[["JLH","Multiply fractions by whole numbers","Multiplying Fractions by Whole Numbers"]],"e":[["68D","Choose the best concluding sentence","Writing: Paragraph Organization"],["DXR","Put the sentences in order","Writing: Paragraph Organization"]],"s":[],"h":[["select-states-of-the-northeast","Select states of the Northeast","States"],["name-states-of-the-northeast","Name states of the Northeast","States"]],"r":[["read-2027-03-22","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-03-23","n":66,"w":"Tue","m":[["M2K","Multiply mixed numbers by whole numbers","Multiplying Fractions by Whole Numbers"],["DSB","Multiply unit fractions by whole numbers: word problems","Multiplying Fractions by Whole Numbers"]],"e":[["TMH","Identify and correct plagiarism","Writing: Paragraph Organization"]],"s":[],"h":[["identify-the-50-states","Identify the 50 states","States"]],"r":[["read-2027-03-23","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-03-24","n":67,"w":"Wed","m":[["LX8","Multiply fractions by whole numbers: word problems","Multiplying Fractions by Whole Numbers"],["SFV","Multiply mixed numbers by whole numbers: word problems","Multiplying Fractions by Whole Numbers"]],"e":[["7XU","Choose the synonym","Vocabulary: Synonyms, Antonyms & Word Choice"]],"s":[],"h":[["select-the-50-states","Select the 50 states","States"]],"r":[["read-2027-03-24","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-03-25","n":68,"w":"Thu","m":[["7B3","Multiply fractions and mixed numbers by whole numbers in recipes","Multiplying Fractions by Whole Numbers"]],"e":[["QLF","Choose the antonym","Vocabulary: Synonyms, Antonyms & Word Choice"]],"s":[],"h":[["name-the-50-states","Name the 50 states","States"]],"r":[["read-2027-03-25","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-03-25","Weekly writing: write and submit something for your book report. Write about a choice a character made. Would you have done the same? Why?","Weekly writing"]]},{"d":"2027-03-29","n":69,"w":"Mon","m":[["QDB","Multiply fractions and mixed numbers by whole numbers: multi-step word problems","Multiplying Fractions by Whole Numbers"],["9RJ","Add fractions: denominators 10 and 100","Decimals"]],"e":[["B6G","Which sentence has the same meaning?","Vocabulary: Synonyms, Antonyms & Word Choice"],["TJ6","Which sentence uses an antonym?","Vocabulary: Synonyms, Antonyms & Word Choice"]],"s":[],"h":[["identify-state-capitals-of-the-west","Identify state capitals of the West","State capitals"]],"r":[["read-2027-03-29","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-03-30","n":70,"w":"Tue","m":[["TZH","Identify fraction expressions with a particular sum: denominators of 10 and 100","Decimals"],["TPV","Model decimals and fractions","Decimals"]],"e":[["N5T","Use thesaurus entries","Vocabulary: Synonyms, Antonyms & Word Choice"]],"s":[["DU6","What's the difference between weather and climate?","Weather & Climate"]],"h":[["name-state-capitals-of-the-west","Name state capitals of the West","State capitals"]],"r":[["read-2027-03-30","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-03-31","n":71,"w":"Wed","m":[["2N9","Graph fractions as decimals on number lines","Decimals"]],"e":[["TWK","Shades of meaning with pictures","Vocabulary: Synonyms, Antonyms & Word Choice"],["78V","Describe the difference between related words","Vocabulary: Synonyms, Antonyms & Word Choice"]],"s":[],"h":[["identify-state-capitals-of-the-midwest","Identify state capitals of the Midwest","State capitals"]],"r":[["read-2027-03-31","Read your Warrior Cats book for 30 minutes","Daily reading"],["report-2027-03","Submit your March book report","Monthly book report"]]},{"d":"2027-04-01","n":72,"w":"Thu","m":[["6P7","Convert fractions and mixed numbers to decimals - denominators of 10 and 100","Decimals"]],"e":[["ZEA","Positive and negative connotation","Vocabulary: Synonyms, Antonyms & Word Choice"]],"s":[],"h":[["name-state-capitals-of-the-midwest","Name state capitals of the Midwest","State capitals"]],"r":[["read-2027-04-01","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-04-02","n":73,"w":"Fri","m":[["DBF","Convert decimals to fractions and mixed numbers","Decimals"],["EAL","Compare money amounts","Decimals"]],"e":[["UZ9","Sort sensory details","Writing: Descriptive Details"]],"s":[["NW8","Weather and climate around the world","Weather & Climate"]],"h":[["identify-state-capitals-of-the-southeast","Identify state capitals of the Southeast","State capitals"]],"r":[["read-2027-04-02","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-04-02","Weekly writing: write and submit something for your book report. Describe the setting. What does the Clan's territory look and feel like?","Weekly writing"]]},{"d":"2027-04-05","n":74,"w":"Mon","m":[["CV7","Compare decimals using models","Decimals"],["T2W","Compare decimals on number lines","Decimals"]],"e":[["FFK","Identify sensory details","Writing: Descriptive Details"],["6BY","Add imagery to stories","Writing: Descriptive Details"]],"s":[],"h":[["name-state-capitals-of-the-southeast","Name state capitals of the Southeast","State capitals"]],"r":[["read-2027-04-05","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-04-06","n":75,"w":"Tue","m":[["DY5","Compare decimal numbers","Decimals"],["YYA","Which customary unit is appropriate?","Measurement & Unit Conversions"]],"e":[["HXU","Revise the sentence using a stronger verb","Writing: Descriptive Details"]],"s":[],"h":[["identify-state-capitals-of-the-northeast","Identify state capitals of the Northeast","State capitals"],["name-state-capitals-of-the-northeast","Name state capitals of the Northeast","State capitals"]],"r":[["read-2027-04-06","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-04-07","n":76,"w":"Wed","m":[["A89","Convert and compare customary units of length","Measurement & Unit Conversions"]],"e":[["D54","Correct errors with signs","Punctuation"]],"s":[],"h":[["identify-the-50-state-capitals","Identify the 50 state capitals","State capitals"]],"r":[["read-2027-04-07","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-04-08","n":77,"w":"Thu","m":[["LJV","Convert and compare customary units of weight","Measurement & Unit Conversions"],["GAA","Convert and compare customary units of volume","Measurement & Unit Conversions"]],"e":[["5CP","Commas with a series","Punctuation"]],"s":[],"h":[],"r":[["read-2027-04-08","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-04-09","n":78,"w":"Fri","m":[["DRM","Convert and compare customary units","Measurement & Unit Conversions"]],"e":[["DLJ","Commas with dates","Punctuation"],["ALN","Commas with the names of places","Punctuation"]],"s":[],"h":[["name-the-50-state-capitals","Name the 50 state capitals","State capitals"],["cities-of-the-west","Cities of the West","Cities"]],"r":[["read-2027-04-09","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-04-09","Weekly writing: write and submit something for your book report. Retell what happened in the chapters you read, in your own words.","Weekly writing"]]},{"d":"2027-04-12","n":79,"w":"Mon","m":[["U95","Convert mixed customary units","Measurement & Unit Conversions"],["FPM","Which metric unit is appropriate?","Measurement & Unit Conversions"],["GZM","Convert and compare metric units of length","Measurement & Unit Conversions"]],"e":[["5PV","Commas with direct addresses","Punctuation"]],"s":[],"h":[["cities-of-the-midwest","Cities of the Midwest","Cities"]],"r":[["read-2027-04-12","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-04-13","n":80,"w":"Tue","m":[["7RC","Convert and compare metric units of mass","Measurement & Unit Conversions"]],"e":[["74G","Commas with introductory words and phrases","Punctuation"],["UNT","Commas: review","Punctuation"]],"s":[["YQM","Weather or climate? Cite text","Weather & Climate"]],"h":[["cities-of-the-southeast","Cities of the Southeast","Cities"]],"r":[["read-2027-04-13","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-04-14","n":81,"w":"Wed","m":[["FHV","Convert and compare metric units of volume","Measurement & Unit Conversions"],["UL5","Convert and compare metric units","Measurement & Unit Conversions"]],"e":[["ECG","Punctuating dialogue","Punctuation"]],"s":[],"h":[["cities-of-the-northeast","Cities of the Northeast","Cities"]],"r":[["read-2027-04-14","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-04-15","n":82,"w":"Thu","m":[["YP2","Convert mixed metric units","Measurement & Unit Conversions"]],"e":[["L7P","Is it a complete sentence or a fragment?","Grammar: Sentence Structure"]],"s":[],"h":[["major-u-s-cities","Major U.S. cities","Cities"]],"r":[["read-2027-04-15","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-04-16","n":83,"w":"Fri","m":[["PS8","Convert time units: hours, minutes, and seconds","Measurement & Unit Conversions"],["QDA","Convert units of time","Measurement & Unit Conversions"]],"e":[["AUH","Is it a complete sentence or a run-on?","Grammar: Sentence Structure"],["X9V","Is it a complete sentence, a fragment, or a run-on?","Grammar: Sentence Structure"]],"s":[],"h":[["local-government","Local government","Government"]],"r":[["read-2027-04-16","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-04-16","Weekly writing: write and submit something for your book report. Pick a character. What do they want, and what is getting in their way?","Weekly writing"]]},{"d":"2027-04-19","n":84,"w":"Mon","m":[["8U7","Compare customary units by multiplying","Measurement, Time & Money Word Problems"],["2PY","Measurement word problems","Measurement, Time & Money Word Problems"]],"e":[["JSA","Create varied sentences based on models","Grammar: Sentence Structure"]],"s":[],"h":[["state-government","State government","Government"],["federal-government","Federal government","Government"]],"r":[["read-2027-04-19","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-04-20","n":85,"w":"Tue","m":[["UST","Measurement word problems with fractions","Measurement, Time & Money Word Problems"],["KXC","Multi-step measurement problems with conversions","Measurement, Time & Money Word Problems"]],"e":[["7M3","Identify the complete subject of a sentence","Grammar: Sentence Structure"],["U6M","Identify the complete predicate of a sentence","Grammar: Sentence Structure"]],"s":[],"h":[["the-constitution","The Constitution","Government"]],"r":[["read-2027-04-20","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-04-21","n":86,"w":"Wed","m":[["VCC","Elapsed time: word problems","Measurement, Time & Money Word Problems"]],"e":[["A5R","Identify the simple subject or predicate of a sentence","Grammar: Sentence Structure"]],"s":[["5Y4","Use climate data to make predictions","Weather & Climate"]],"h":[],"r":[["read-2027-04-21","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-04-22","n":87,"w":"Thu","m":[["ZQP","Find start and end times: multi-step word problems","Measurement, Time & Money Word Problems"]],"e":[["ACF","Order the words to create a sentence","Grammar: Sentence Structure"]],"s":[],"h":[["the-bill-of-rights","The Bill of Rights","Government"]],"r":[["read-2027-04-22","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-04-23","n":88,"w":"Fri","m":[["2D5","Add and subtract money amounts: word problems","Measurement, Time & Money Word Problems"],["KGJ","Find the perimeter of rectangles using formulas","Area & Perimeter"]],"e":[["EV2","Is the sentence simple or compound?","Grammar: Sentence Structure"]],"s":[],"h":[["checks-and-balances","Checks and balances","Government"],["presidential-elections","Presidential elections","Government"]],"r":[["read-2027-04-23","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-04-23","Weekly writing: write and submit something for your book report. Predict what will happen next, and give two clues from the book that support it.","Weekly writing"]]},{"d":"2027-04-26","n":89,"w":"Mon","m":[["GBE","Perimeter: word problems","Area & Perimeter"],["JBF","Find the area of rectangles using formulas","Area & Perimeter"]],"e":[["XA7","Create compound sentences","Grammar: Sentence Structure"],["HNY","Capitalizing the names of people and pets and titles of respect","Capitalization"]],"s":[],"h":[["identify-american-symbols","Identify American symbols","American symbols, landmarks, and monuments"]],"r":[["read-2027-04-26","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-04-27","n":90,"w":"Tue","m":[["9E6","Find the area or missing side length of a rectangle","Area & Perimeter"],["JW7","Area: word problems","Area & Perimeter"]],"e":[["2RN","Capitalizing days, months, and holidays","Capitalization"],["G2S","Capitalizing the names of places and geographic features","Capitalization"]],"s":[],"h":[["identify-american-landmarks-and-monuments-part-i","Identify American landmarks and monuments: part I","American symbols, landmarks, and monuments"]],"r":[["read-2027-04-27","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-04-28","n":91,"w":"Wed","m":[["GY2","Area between two rectangles","Area & Perimeter"]],"e":[["L77","Capitalizing the names of historical events, periods, and documents","Capitalization"]],"s":[["FVS","Use data to describe climates","Weather & Climate"]],"h":[["identify-american-landmarks-and-monuments-part-ii","Identify American landmarks and monuments: part II","American symbols, landmarks, and monuments"]],"r":[["read-2027-04-28","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-04-29","n":92,"w":"Thu","m":[["S7Y","Compare area and perimeter of rectangles and squares","Area & Perimeter"]],"e":[["G83","Capitalizing proper adjectives, nationalities, and languages","Capitalization"]],"s":[],"h":[["the-american-flag","The American flag","American symbols, landmarks, and monuments"]],"r":[["read-2027-04-29","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-04-30","n":93,"w":"Fri","m":[["SKK","Relationship between area and perimeter","Area & Perimeter"],["LTP","Area and perimeter: word problems","Area & Perimeter"],["HWY","Area and perimeter of complex figures: word problems","Area & Perimeter"]],"e":[["58V","Capitalization: review","Capitalization"]],"s":[],"h":[["the-white-house","The White House","American symbols, landmarks, and monuments"]],"r":[["read-2027-04-30","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-04-30","Weekly writing: write and submit something for your book report. Describe your favorite scene so well that someone who has not read it can picture it.","Weekly writing"],["report-2027-04","Submit your April book report","Monthly book report"]]},{"d":"2027-05-03","n":94,"w":"Mon","m":[["5CZ","Solve problems involving the area and perimeter of rectangles","Area & Perimeter"]],"e":[["JCE","Capitalizing titles","Capitalization"],["7HQ","Identify relative pronouns","Grammar: Pronouns, Verbs, Adjectives & Prepositions"]],"s":[],"h":[["the-washington-monument","The Washington Monument","American symbols, landmarks, and monuments"],["the-lincoln-memorial","The Lincoln Memorial","American symbols, landmarks, and monuments"]],"r":[["read-2027-05-03","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-05-04","n":95,"w":"Tue","m":[["S9M","Rectangles: relationship between perimeter and area word problems","Area & Perimeter"],["5GF","Use area and perimeter to determine cost","Area & Perimeter"]],"e":[["BMC","Use relative pronouns: who and whom","Grammar: Pronouns, Verbs, Adjectives & Prepositions"],["5AY","Use relative pronouns: who, whom, whose, which, and that","Grammar: Pronouns, Verbs, Adjectives & Prepositions"]],"s":[],"h":[["the-statue-of-liberty","The Statue of Liberty","American symbols, landmarks, and monuments"]],"r":[["read-2027-05-04","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-05-05","n":96,"w":"Wed","m":[["QQB","Create and interpret line plots with fractions","Line Plots"],["JVG","Interpret line plots with fractions: multi-step problems","Line Plots"]],"e":[],"s":[],"h":[["the-empire-state-building","The Empire State Building","American symbols, landmarks, and monuments"]],"r":[["read-2027-05-05","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-05-06","n":97,"w":"Thu","m":[["N72","Angles as fractions of a circle","Angles"]],"e":[["PJV","Use relative adverbs","Grammar: Pronouns, Verbs, Adjectives & Prepositions"],["QNP","Use the progressive verb tenses","Grammar: Pronouns, Verbs, Adjectives & Prepositions"]],"s":[],"h":[],"r":[["read-2027-05-06","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-05-07","n":98,"w":"Fri","m":[["Q68","Use fractions to find the measure of an angle","Angles"],["UQV","Angles of 90, 180, 270, and 360 degrees","Angles"]],"e":[["SXQ","Form the progressive verb tenses","Grammar: Pronouns, Verbs, Adjectives & Prepositions"]],"s":[],"h":[["the-golden-gate-bridge","The Golden Gate Bridge","American symbols, landmarks, and monuments"],["mount-rushmore","Mount Rushmore","American symbols, landmarks, and monuments"]],"r":[["read-2027-05-07","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-05-07","Weekly writing: write and submit something for your book report. Find a new or tricky word. Write what it means and use it in a sentence.","Weekly writing"]]},{"d":"2027-05-10","n":99,"w":"Mon","m":[["RK8","Measure angles on a circle","Angles"],["LUJ","Estimate angle measurements","Angles"]],"e":[["B9S","What does the modal verb show?","Grammar: Pronouns, Verbs, Adjectives & Prepositions"]],"s":[["A2S","Describe and graph water on Earth","Water & Natural Hazards"]],"h":[["thanksgiving","Thanksgiving","American national holidays"]],"r":[["read-2027-05-10","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-05-11","n":100,"w":"Tue","m":[["NCN","Measure angles with a protractor","Angles"],["R9K","Draw angles with a protractor","Angles"]],"e":[["6HX","Use the correct modal verb","Grammar: Pronouns, Verbs, Adjectives & Prepositions"],["57U","Order adjectives","Grammar: Pronouns, Verbs, Adjectives & Prepositions"]],"s":[],"h":[["what-is-economics","What is economics?","Basic economic principles"]],"r":[["read-2027-05-11","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-05-12","n":101,"w":"Wed","m":[["VJY","Adjacent angles","Angles"]],"e":[["Y6S","Identify prepositional phrases","Grammar: Pronouns, Verbs, Adjectives & Prepositions"],["ZJL","Prepositions: review","Grammar: Pronouns, Verbs, Adjectives & Prepositions"]],"s":[],"h":[["costs-and-benefits","Costs and benefits","Basic economic principles"]],"r":[["read-2027-05-12","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-05-13","n":102,"w":"Thu","m":[["YUA","Angle measures: word problems","Angles"]],"e":[["YE5","Homophones with pictures","Spelling: Homophones, Contractions & Comparatives"]],"s":[],"h":[["opportunity-cost","Opportunity cost","Basic economic principles"]],"r":[["read-2027-05-13","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-05-14","n":103,"w":"Fri","m":[["MBL","Solve problems involving angle measures","Angles"],["8VQ","Parallel, perpendicular, and intersecting lines","Geometry: Lines, Shapes & Symmetry"]],"e":[["ZR5","Identify homophones","Spelling: Homophones, Contractions & Comparatives"]],"s":[["G5K","Evaluate multiple design solutions to prevent flooding","Water & Natural Hazards"]],"h":[["understand-quantity-supplied-and-quantity-demanded","Understand quantity supplied and quantity demanded","Supply and demand"]],"r":[["read-2027-05-14","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-05-14","Weekly writing: write and submit something for your book report. Compare two cats in the story: how are they alike and how are they different?","Weekly writing"]]},{"d":"2027-05-17","n":104,"w":"Mon","m":[["DSU","Identify parallel, perpendicular, and intersecting lines","Geometry: Lines, Shapes & Symmetry"],["58M","Parallel sides in quadrilaterals","Geometry: Lines, Shapes & Symmetry"]],"e":[["6YG","Match homophones to their meanings","Spelling: Homophones, Contractions & Comparatives"]],"s":[],"h":[["understand-overall-supply-and-demand","Understand overall supply and demand","Supply and demand"],["create-and-use-supply-and-demand-curves","Create and use supply and demand curves","Supply and demand"]],"r":[["read-2027-05-17","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-05-18","n":105,"w":"Tue","m":[["9MK","Points, lines, line segments, rays, and angles","Geometry: Lines, Shapes & Symmetry"],["R5K","Acute, right, obtuse, and straight angles","Geometry: Lines, Shapes & Symmetry"]],"e":[["S8L","Use the correct homophone","Spelling: Homophones, Contractions & Comparatives"],["U8T","Pronoun-verb contractions","Spelling: Homophones, Contractions & Comparatives"]],"s":[],"h":[["identify-shortage-and-surplus","Identify shortage and surplus","Supply and demand"]],"r":[["read-2027-05-18","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-05-19","n":106,"w":"Wed","m":[["67D","Sides and angles in polygons","Geometry: Lines, Shapes & Symmetry"]],"e":[["XNV","Contractions with \"not\"","Spelling: Homophones, Contractions & Comparatives"]],"s":[],"h":[["identify-shortage-and-surplus-with-graphs","Identify shortage and surplus with graphs","Supply and demand"]],"r":[["read-2027-05-19","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-05-20","n":107,"w":"Thu","m":[["7QK","Acute, obtuse, and right triangles","Geometry: Lines, Shapes & Symmetry"],["5UV","Scalene, isosceles, and equilateral triangles","Geometry: Lines, Shapes & Symmetry"]],"e":[["WA9","Spell adjectives that compare","Spelling: Homophones, Contractions & Comparatives"]],"s":[],"h":[],"r":[["read-2027-05-20","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-05-21","n":108,"w":"Fri","m":[["U59","Classify triangles","Geometry: Lines, Shapes & Symmetry"]],"e":[["9K2","Order alphabetically based on the first letter","Reference Skills (Alphabetizing & Dictionary)"],["MCJ","Order alphabetically based on the first two letters","Reference Skills (Alphabetizing & Dictionary)"]],"s":[],"h":[["identify-shortage-and-surplus-with-data","Identify shortage and surplus with data","Supply and demand"],["banks","Banks","Banking and finance"]],"r":[["read-2027-05-21","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-05-21","Weekly writing: write and submit something for your book report. Write about a choice a character made. Would you have done the same? Why?","Weekly writing"]]},{"d":"2027-05-24","n":109,"w":"Mon","m":[["PTK","Sides and angles of quadrilaterals","Geometry: Lines, Shapes & Symmetry"],["A6V","Classify quadrilaterals","Geometry: Lines, Shapes & Symmetry"]],"e":[["5WL","Order alphabetically based on the first three letters","Reference Skills (Alphabetizing & Dictionary)"]],"s":[["R9W","Identify the best design solution to prevent hurricane damage","Water & Natural Hazards"]],"h":[["identify-facts-and-opinions","Identify facts and opinions","Evaluate sources"]],"r":[["read-2027-05-24","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-05-25","n":110,"w":"Tue","m":[["6CT","Pick all the names for a quadrilateral","Geometry: Lines, Shapes & Symmetry"],["TND","Name quadrilaterals more than one way","Geometry: Lines, Shapes & Symmetry"]],"e":[["NPW","Order alphabetically: challenge","Reference Skills (Alphabetizing & Dictionary)"],["AJ5","Use guide words","Reference Skills (Alphabetizing & Dictionary)"]],"s":[],"h":[["identify-primary-and-secondary-sources","Identify primary and secondary sources","Evaluate sources"]],"r":[["read-2027-05-25","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-05-26","n":111,"w":"Wed","m":[["9FD","Identify lines of symmetry","Geometry: Lines, Shapes & Symmetry"],["SQF","Draw lines of symmetry","Geometry: Lines, Shapes & Symmetry"]],"e":[["K7L","Use dictionary entries","Reference Skills (Alphabetizing & Dictionary)"]],"s":[],"h":[["read-and-create-timelines","Read and create timelines","Chronology and causation"]],"r":[["read-2027-05-26","Read your Warrior Cats book for 30 minutes","Daily reading"]]},{"d":"2027-05-27","n":112,"w":"Thu","m":[["MWS","Count lines of symmetry","Geometry: Lines, Shapes & Symmetry"]],"e":[["KXN","Use dictionary definitions","Reference Skills (Alphabetizing & Dictionary)"]],"s":[],"h":[["identify-cause-and-effect-in-informational-texts","Identify cause and effect in informational texts","Chronology and causation"]],"r":[["read-2027-05-27","Read your Warrior Cats book for 30 minutes","Daily reading"],["write-2027-05-27","Weekly writing: write and submit something for your book report. Describe the setting. What does the Clan's territory look and feel like?","Weekly writing"],["report-2027-05","Submit your May book report","Monthly book report"]]}];
+
+/* ---------- helpers ---------- */
+const byDate = {};
+DAYS.forEach(d => { byDate[d.d] = d; });
+const FIRST = DAYS[0].d, LAST = DAYS[DAYS.length - 1].d;
+const pad = n => String(n).padStart(2, '0');
+const keyOf = dt => dt.getFullYear() + '-' + pad(dt.getMonth() + 1) + '-' + pad(dt.getDate());
+const parse = k => { const p = k.split('-').map(Number); return new Date(p[0], p[1] - 1, p[2]); };
+const addDays = (k, n) => { const dt = parse(k); dt.setDate(dt.getDate() + n); return keyOf(dt); };
+const fmt = (k, o) => parse(k).toLocaleDateString('en-US', o || { weekday: 'short', month: 'short', day: 'numeric' });
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const todayKey = () => keyOf(new Date());
+function mondayOf(k) {
+  const dt = parse(k); const wd = dt.getDay();
+  if (wd === 6) dt.setDate(dt.getDate() + 2);
+  else if (wd === 0) dt.setDate(dt.getDate() + 1);
+  else dt.setDate(dt.getDate() - (wd - 1));
+  return keyOf(dt);
+}
+function offLabel(k) {
+  if (k === '2026-11-11') return 'Veterans Day';
+  if (k >= '2026-11-25' && k <= '2026-11-27') return 'Thanksgiving break';
+  if (k >= '2026-12-18' && k <= '2027-01-01') return 'Winter break';
+  if (k === '2027-01-18') return 'MLK Day';
+  if (k === '2027-02-15') return "Presidents Day";
+  if (k >= '2027-03-08' && k <= '2027-03-12') return 'Spring break';
+  if (k === '2027-03-26') return 'Spring holiday';
+  if (k === '2027-05-31') return 'Memorial Day';
+  if (k < FIRST) return 'Starts ' + fmt(FIRST);
+  if (k > LAST) return 'School year complete';
+  return 'No school';
+}
+const SUBJ = [
+  { key: 'm', subj: 'Math', prefix: 'm-', title: 'Math', cls: 'math', ixl: true },
+  { key: 'e', subj: 'ELA', prefix: 'e-', title: 'Language Arts', cls: 'ela', ixl: true },
+  { key: 's', subj: 'Science', prefix: 's-', title: 'Science', cls: 'sci', ixl: true },
+  { key: 'h', subj: 'Social', prefix: 'h-', title: 'Social Studies', cls: 'soc', ixl: false },
+  { key: 'r', subj: 'Read', prefix: '', title: 'Reading & Writing', cls: 'read', ixl: false }
+];
+const SBY = {}; SUBJ.forEach(s => { SBY[s.subj] = s; });
+function lessonsOf(day) {
+  const out = [];
+  SUBJ.forEach(s => (day[s.key] || []).forEach(x => out.push({ id: s.prefix + x[0], subj: s.subj, code: x[0], name: x[1], cat: x[2] })));
+  return out;
+}
+
+/* ---------- state ---------- */
+let tab = 'today';
+let weekStart = mondayOf(todayKey());
+let done = new Set();
+let mode = 'local';          // 'db' once the shared store answers
+let dbBlocked = false;       // true if a write was refused
+let aheadOpen = false;
+let cheer = false;
+let focusId = null;
+let queue = Promise.resolve();
+const LS = 'sage-den-done-v1';
+
+try { const raw = localStorage.getItem(LS); if (raw) done = new Set(JSON.parse(raw)); } catch (e) {}
+function saveLocal() { try { localStorage.setItem(LS, JSON.stringify([...done])); } catch (e) {} }
+
+function countsFor(day) {
+  const ls = lessonsOf(day); let n = 0;
+  ls.forEach(l => { if (done.has(l.id)) n++; });
+  return { total: ls.length, n };
+}
+function missedDays() {
+  const t = todayKey();
+  return DAYS.filter(d => d.d < t).map(d => ({ day: d, lessons: lessonsOf(d).filter(l => !done.has(l.id)) })).filter(x => x.lessons.length);
+}
+function nextDayAfter(k, inclusive) {
+  return DAYS.find(d => inclusive ? d.d >= k : d.d > k) || null;
+}
+
+/* ---------- cat art ---------- */
+function catSVG(mood) {
+  let eyes;
+  if (mood === 'happy') eyes = '<path d="M30 46q6-9 12 0M58 46q6-9 12 0" fill="none" stroke="var(--ink)" stroke-width="3.4" stroke-linecap="round"/>';
+  else if (mood === 'sleepy') eyes = '<path d="M30 46h12M58 46h12" stroke="var(--ink)" stroke-width="3.4" stroke-linecap="round"/><text x="74" y="22" font-size="11" font-weight="800" fill="var(--muted)" font-family="Nunito,sans-serif">z</text><text x="82" y="13" font-size="8" font-weight="800" fill="var(--muted)" font-family="Nunito,sans-serif">z</text>';
+  else eyes = '<ellipse cx="36" cy="46" rx="4.6" ry="5.6" fill="var(--ink)"/><ellipse cx="64" cy="46" rx="4.6" ry="5.6" fill="var(--ink)"/><circle cx="37.6" cy="44" r="1.5" fill="#fff"/><circle cx="65.6" cy="44" r="1.5" fill="#fff"/>';
+  return '<svg viewBox="0 0 100 90" role="img" aria-label="Cat">' +
+    '<path d="M13 40 18 6 44 24z" fill="var(--fur)"/><path d="M87 40 82 6 56 24z" fill="var(--fur)"/>' +
+    '<path d="M20 31 22 15 34 24z" fill="var(--ear)"/><path d="M80 31 78 15 66 24z" fill="var(--ear)"/>' +
+    '<ellipse cx="50" cy="54" rx="38" ry="32" fill="var(--fur)"/>' +
+    '<path d="M50 23v9M41 25l2 8M59 25l-2 8" stroke="var(--fur-dark)" stroke-width="3" stroke-linecap="round" fill="none"/>' +
+    '<ellipse cx="50" cy="66" rx="15" ry="10" fill="#fff" opacity=".85"/>' +
+    eyes +
+    '<path d="M46 58h8l-4 5z" fill="var(--ela)"/>' +
+    '<path d="M50 63q-3.5 5-8 2.5M50 63q3.5 5 8 2.5" stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round" fill="none"/>' +
+    '<path d="M26 58 8 54M26 63 9 65M74 58 92 54M74 63 91 65" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" opacity=".55"/>' +
+    '</svg>';
+}
+
+/* ---------- views ---------- */
+function codeLabel(l) {
+  if (l.subj === 'Social') return 'IXL social studies';
+  if (l.subj === 'Read') return l.cat;
+  return 'IXL ' + l.code;
+}
+function rowHTML(l) {
+  const on = done.has(l.id);
+  return '<label class="lesson' + (on ? ' is-done' : '') + '">' +
+    '<input type="checkbox" data-id="' + l.id + '"' + (on ? ' checked' : '') + '>' +
+    '<span class="paw"><svg aria-hidden="true"><use href="#paw"/></svg></span>' +
+    '<span class="ltxt"><span class="lname">' + esc(l.name) + '</span><span class="code">' + esc(codeLabel(l)) + '</span></span></label>';
+}
+function focusOf(ls) {
+  const seen = [];
+  ls.forEach(l => { if (seen.indexOf(l.cat) < 0) seen.push(l.cat); });
+  return seen.join(' · ');
+}
+function subjectSection(s, ls) {
+  if (!ls.length) return '';
+  const n = ls.filter(l => done.has(l.id)).length;
+  const focus = s.subj === 'Read' ? '' : focusOf(ls);
+  return '<section class="subj ' + s.cls + '"><header><h3>' + s.title + '</h3>' +
+    '<span class="focus">' + esc(focus) + '</span><span class="cnt">' + n + ' of ' + ls.length + '</span></header>' +
+    ls.map(rowHTML).join('') + '</section>';
+}
+function daySections(day, filterFn) {
+  let ls = lessonsOf(day);
+  if (filterFn) ls = ls.filter(filterFn);
+  return SUBJ.map(s => subjectSection(s, ls.filter(l => l.subj === s.subj))).join('');
+}
+function hero(title, sub, n, total, mood, cheerNow) {
+  const pct = total ? Math.round(100 * n / total) : 0;
+  const walkLeft = Math.min(96, Math.max(4, pct));
+  return '<section class="hero' + (cheerNow ? ' cheer' : '') + '">' +
+    '<div class="mascot">' + catSVG(mood) + '</div><div>' +
+    '<h2>' + esc(title) + '</h2><div class="sub">' + esc(sub) + '</div>' +
+    '<div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="' + total + '" aria-valuenow="' + n + '">' +
+    '<div class="fill" style="width:' + pct + '%"></div><div class="walker" style="left:' + walkLeft + '%">' + catSVG(pct === 100 ? 'happy' : 'open') + '</div></div>' +
+    '<div class="stat">' + n + ' of ' + total + ' done' + (pct === 100 ? ' <span class="ok-note">· Purr-fect!</span>' : '') + '</div>' +
+    '</div></section>';
+}
+function greeting() {
+  const h = new Date().getHours();
+  return h < 12 ? 'Good morning, Sage' : h < 17 ? 'Good afternoon, Sage' : 'Good evening, Sage';
+}
+function missedNotice() {
+  const m = missedDays(); const n = m.reduce((a, x) => a + x.lessons.length, 0);
+  if (!n) return '';
+  return '<div class="notice"><span>' + n + ' lesson' + (n === 1 ? ' is' : 's are') + ' waiting in Catch-up.</span>' +
+    '<button class="pill-btn" data-tab="catchup">Open Catch-up</button></div>';
+}
+function aheadBlock(fromKey) {
+  const nx = nextDayAfter(fromKey, false);
+  if (!nx) return '';
+  const c = countsFor(nx);
+  return '<details class="ahead"' + (aheadOpen ? ' open' : '') + '><summary>Work ahead: ' + esc(fmt(nx.d)) + ' · ' + c.n + ' of ' + c.total + ' done</summary>' +
+    daySections(nx) + '</details>';
+}
+
+function viewToday() {
+  const t = todayKey();
+  const day = byDate[t];
+  if (day) {
+    const c = countsFor(day);
+    const all = c.n === c.total;
+    const mood = all ? 'happy' : c.n === 0 ? 'sleepy' : 'open';
+    return hero(greeting(), 'Day ' + day.n + ' of ' + DAYS.length + ' · ' + fmt(t, { weekday: 'long', month: 'long', day: 'numeric' }), c.n, c.total, mood, cheer && all) +
+      missedNotice() + daySections(day) + aheadBlock(t);
+  }
+  const nx = nextDayAfter(t, true);
+  if (!nx) {
+    return '<div class="empty">' + catSVG('happy') + '<h2>Every planned lesson is on the calendar</h2><span>Check the Catch-up tab for anything left over.</span></div>' + missedNotice();
+  }
+  const c = countsFor(nx);
+  return '<div class="empty">' + catSVG('sleepy') + '<h2>No lessons today</h2><span>' + esc(offLabel(t)) + '. Next up: ' + esc(fmt(nx.d, { weekday: 'long', month: 'long', day: 'numeric' })) + '.</span></div>' +
+    missedNotice() +
+    '<div class="dayhead"><h2>Coming up: ' + esc(fmt(nx.d)) + '</h2><span class="meta">' + c.n + ' of ' + c.total + ' done</span></div>' + daySections(nx);
+}
+
+function viewCatchup() {
+  const m = missedDays();
+  if (!m.length) {
+    return '<div class="empty">' + catSVG('happy') + '<h2>Nothing to catch up on</h2><span>Every lesson before today is checked off.</span></div>';
+  }
+  const total = m.reduce((a, x) => a + x.lessons.length, 0);
+  let html = '<section class="hero"><div class="mascot">' + catSVG('open') + '</div><div><h2>Catch-up</h2><div class="sub">' + total +
+    ' lesson' + (total === 1 ? '' : 's') + ' from earlier days. Oldest first.</div></div></section>';
+  m.forEach(x => {
+    html += '<div><div class="dayhead"><h2>' + esc(fmt(x.day.d, { weekday: 'long', month: 'long', day: 'numeric' })) + '</h2>' +
+      '<span class="meta">' + x.lessons.length + ' left <button class="linklike" data-markday="' + x.day.d + '">Mark all done</button></span></div>' +
+      daySections(x.day, l => !done.has(l.id)) + '</div>';
+  });
+  return html;
+}
+
+function viewWeek() {
+  const t = todayKey();
+  const keys = [0, 1, 2, 3, 4].map(i => addDays(weekStart, i));
+  let total = 0, n = 0;
+  keys.forEach(k => { const d = byDate[k]; if (d) { const c = countsFor(d); total += c.total; n += c.n; } });
+  const pct = total ? Math.round(100 * n / total) : 0;
+  let html = '<div class="weekbar"><h2>' + esc(fmt(keys[0], { month: 'short', day: 'numeric' })) + ' to ' + esc(fmt(keys[4], { month: 'short', day: 'numeric' })) + '</h2>' +
+    '<div class="nav"><button data-week="-1" aria-label="Previous week">Back</button><button data-week="0">This week</button><button data-week="1" aria-label="Next week">Next</button></div></div>';
+  html += '<section class="hero"><div class="mascot">' + catSVG(total && n === total ? 'happy' : 'open') + '</div><div><h2>This week\'s plan</h2><div class="sub">' +
+    (total ? 'Check off extras any time to get ahead.' : 'No lessons this week.') + '</div>' +
+    (total ? '<div class="bar"><div class="fill" style="width:' + pct + '%"></div></div><div class="stat">' + n + ' of ' + total + ' checked off</div>' : '') +
+    '</div></section>';
+  html += '<div class="weekgrid">';
+  keys.forEach(k => {
+    const d = byDate[k];
+    const isToday = k === t;
+    if (!d) {
+      html += '<section class="daycard off' + (isToday ? ' today' : '') + '"><header><h3>' + esc(fmt(k)) + '</h3></header><div>' + esc(offLabel(k)) + '</div></section>';
+      return;
+    }
+    const c = countsFor(d);
+    let tag = '';
+    if (c.n === c.total) tag = '<span class="tag done">Done</span>';
+    else if (k < t) tag = '<span class="tag missed">' + (c.total - c.n) + ' missed</span>';
+    else if (isToday) tag = '<span class="tag today">Today</span>';
+    const ls = lessonsOf(d);
+    html += '<section class="daycard' + (isToday ? ' today' : '') + '"><header><h3>' + esc(fmt(k)) + '</h3><span>' + tag + ' <span class="meta">' + c.n + '/' + c.total + '</span></span></header>' +
+      SUBJ.map(s => { const sl = ls.filter(l => l.subj === s.subj); return sl.length ? '<div class="sublabel ' + s.cls + '">' + s.title + (s.subj === 'Read' ? '' : ' · ' + esc(focusOf(sl))) + '</div>' + sl.map(rowHTML).join('') : ''; }).join('') +
+      '<footer>' + (c.n < c.total ? '<button class="linklike" data-markday="' + k + '">Mark all done</button>' : '') + '</footer></section>';
+  });
+  html += '</div>';
+  return html;
+}
+
+/* ---------- render ---------- */
+function render() {
+  const app = document.getElementById('app');
+  app.innerHTML = tab === 'today' ? viewToday() : tab === 'catchup' ? viewCatchup() : viewWeek();
+  ['today', 'catchup', 'week'].forEach(t => document.getElementById('tab-' + t).setAttribute('aria-selected', String(t === tab)));
+  const m = missedDays().reduce((a, x) => a + x.lessons.length, 0);
+  const b = document.getElementById('missed-badge');
+  b.hidden = !m; b.textContent = m;
+  document.getElementById('today-label').textContent = fmt(todayKey(), { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+  document.getElementById('sync-note').textContent = mode === 'db' && !dbBlocked
+    ? 'Progress saves automatically and follows you between devices.'
+    : 'Progress is saved on this device.';
+  if (focusId) {
+    const el = app.querySelector('input[data-id="' + focusId + '"]');
+    if (el) el.focus({ preventScroll: true });
+  }
+}
+
+/* ---------- saving ---------- */
+let dbRef = null;
+function persist(id, on) {
+  saveLocal();
+  if (mode !== 'db' || dbBlocked || !dbRef) return;
+  queue = queue.then(() => on ? dbRef.collection('done').doc(id).set({ at: Date.now() }) : dbRef.collection('done').doc(id).delete())
+    .catch(err => { dbBlocked = true; render(); });
+}
+function setDone(id, on) {
+  if (on) done.add(id); else done.delete(id);
+  persist(id, on);
+}
+function todayAllDone() {
+  const d = byDate[todayKey()];
+  if (!d) return false;
+  const c = countsFor(d);
+  return c.total > 0 && c.n === c.total;
+}
+
+document.addEventListener('change', e => {
+  const el = e.target;
+  if (!el.matches || !el.matches('input[data-id]')) return;
+  const was = todayAllDone();
+  focusId = el.getAttribute('data-id');
+  setDone(focusId, el.checked);
+  cheer = !was && todayAllDone();
+  render();
+  if (cheer) setTimeout(() => { cheer = false; }, 2500);
+});
+document.addEventListener('click', e => {
+  const t = e.target.closest ? e.target.closest('[data-tab],[data-markday],[data-week]') : null;
+  if (!t) return;
+  focusId = null;
+  if (t.hasAttribute('data-tab')) { tab = t.getAttribute('data-tab'); render(); return; }
+  if (t.hasAttribute('data-week')) {
+    const v = Number(t.getAttribute('data-week'));
+    weekStart = v === 0 ? mondayOf(todayKey()) : addDays(weekStart, 7 * v);
+    render(); return;
+  }
+  if (t.hasAttribute('data-markday')) {
+    const d = byDate[t.getAttribute('data-markday')];
+    if (d) lessonsOf(d).forEach(l => { if (!done.has(l.id)) setDone(l.id, true); });
+    render();
+  }
+});
+document.getElementById('app').addEventListener('toggle', e => {
+  if (e.target && e.target.classList && e.target.classList.contains('ahead')) aheadOpen = e.target.open;
+}, true);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) { weekStart = tab === 'week' ? weekStart : mondayOf(todayKey()); render(); } });
+
+/* ---------- start ---------- */
+document.getElementById('logo').innerHTML = catSVG('open');
+render();
+(async function connect() {
+  try {
+    const c = window.claude;
+    if (!c || !c.use) return;
+    const db = await c.use('db');
+    if (!db) return;
+    dbRef = db;
+    mode = 'db';
+    db.collection('done').onSnapshot(snap => {
+      if (dbBlocked) return;
+      done = new Set(snap.docs.map(d => d.id));
+      saveLocal();
+      render();
+    }, err => { mode = 'local'; render(); });
+    render();
+  } catch (e) { mode = 'local'; render(); }
+})();
+</script>

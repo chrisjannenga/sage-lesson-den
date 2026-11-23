@@ -32,13 +32,14 @@ export function mondayOf(k: string) {
 
 export function offLabel(k: string) {
   if (k === '2026-11-11') return 'Veterans Day';
-  if (k >= '2026-11-25' && k <= '2027-01-03') return 'Winter break';
+  if (k >= '2026-11-25' && k <= '2026-11-27') return 'Thanksgiving break';
+  if (k >= '2026-12-18' && k <= '2027-01-01') return 'Winter break';
   if (k === '2027-01-18') return 'MLK Day';
   if (k === '2027-02-15') return 'Presidents Day';
   if (k >= '2027-03-08' && k <= '2027-03-12') return 'Spring break';
   if (k === '2027-03-26') return 'Spring holiday';
   if (k === '2027-05-31') return 'Memorial Day';
   if (k < FIRST) return 'Starts ' + fmt(FIRST);
-  if (k > LAST) return 'All lessons planned';
-  return 'No lessons';
+  if (k > LAST) return 'School year complete';
+  return 'No school';
 }

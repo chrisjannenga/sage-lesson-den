@@ -1,0 +1,500 @@
+## Math|Word Problems & Multiplicative Comparison
+GGE|Compare numbers using multiplication
+QKB|Compare numbers using multiplication: word problems
+YCW|Comparison word problems: addition or multiplication?
+AH8|Comparison word problems with multiplication and division: larger numbers
+9GX|Divide larger numbers by 1-digit numbers: comparison word problems
+5WV|Divide 2-digit numbers by 1-digit numbers: interpret remainders
+J8D|Divide larger numbers by 1-digit numbers: interpret remainders
+28P|Use strip diagrams to represent and solve multistep addition and subtraction word problems
+CZQ|Multi-step word problems with strip diagrams
+G8Z|Use strip diagrams to represent and solve multistep word problems
+TFH|Multiply 1-digit numbers by 2-digit numbers: multi-step word problems
+M9R|Multiply 1-digit numbers by 3-digit or 4-digit numbers: multi-step word problems
+RM5|Multiply a 2-digit number by a 2-digit number: multi-step word problems
+CZM|Multi-step addition and subtraction word problems
+EA9|Multi-step word problems
+SLS|Multi-step word problems involving remainders
+X64|Word problems with extra or missing information
+5SJ|Write equations to represent word problems
+F5H|Use equations to solve addition and subtraction word problems
+J8E|Use equations to solve multi-step addition and subtraction word problems
+ZJ5|Use equations to solve multi-step multiplication word problems
+VDA|Use equations to solve multi-step division word problems
+KLA|Estimate products word problems: identify reasonable answers
+K6X|Multi-step word problems: identify reasonable answers
+## Math|Factors & Multiples
+TNF|Prime and composite: up to 20
+L9R|Prime and composite: up to 100
+EFB|Choose the multiples of a given number up to 10
+JMX|Sort multiples into a Venn diagram
+8ZV|Understand factors and factor pairs
+2S9|Identify factors
+URL|Find all the factor pairs of a number
+U9N|Choose numbers with a particular product
+## Math|Number Patterns
+V68|Make a repeating pattern
+5P2|Use a rule to complete a number pattern
+NVV|Extend growing shape patterns
+AKK|Extend repeating shape patterns
+KG8|Find the next shape in a pattern
+FNW|Complete a repeating pattern
+C9H|What is true about the given pattern?
+35J|What is true about the pattern made by the rule?
+PFV|Identify mistakes in number patterns
+F92|Solve word problems involving number patterns in tables
+## Math|Place Value & Number Names
+WLP|Value of a digit
+9DJ|Relationship between place values
+9R2|Find 10 or 100 times a number
+2Y7|Place value models
+Z47|Place value word problems
+B5N|Place value review
+5G4|Writing numbers up to one million: convert between words and digits
+2PZ|Spell word names for numbers up to one million
+SQQ|Writing numbers up to 100,000 in words: convert words to digits
+2RZ|Writing numbers up to 100,000 in words: convert digits to words
+7WT|Writing numbers up to one million in words: convert digits to words
+M5V|Convert between standard and expanded form
+6Y2|Compare numbers up to one million
+DP2|Compare numbers up to one hundred thousand
+## Math|Rounding & Estimating
+E6V|Rounding: up to millions place
+UA7|Round a number to any place: up to hundred thousands
+CT2|Rounding input/output tables
+VMD|Estimate sums
+SB9|Estimate sums: word problems
+QJY|Estimate differences
+GWS|Estimate differences: word problems
+WDG|Estimate products: multiply by 1-digit numbers
+2TR|Estimate products: multiply by 2-digit numbers
+WGL|Estimate products: word problems
+2FS|Divide by 1-digit numbers: pick the better estimate
+CRD|Estimate sums, differences, products, and quotients: word problems
+## Math|Add & Subtract Multi-Digit Numbers
+RG2|Add two multi-digit numbers
+ZPY|Add two multi-digit numbers: word problems
+D9R|Properties of addition
+ZMC|Add 3 or more numbers up to millions
+VQH|Addition: fill in the missing digits
+P5U|Choose numbers with a particular sum
+VP2|Subtract two multi-digit numbers
+R9N|Subtract two multi-digit numbers: word problems
+UXK|Subtraction: fill in the missing digits
+XEV|Choose numbers with a particular difference
+WEG|Add and subtract numbers ending in zeros
+RJJ|Comparison word problems with addition and subtraction
+## Math|Multiplication: Facts & 1-Digit Factors
+FW9|Multiplication facts to 12
+W6D|Use one multiplication fact to complete another
+8UH|Multiply 1-digit numbers by teen numbers using grids
+VCM|Multiply 1-digit numbers by 2-digit numbers: choose the area model
+HZX|Multiply 1-digit numbers by 2-digit numbers using area models
+RP9|Multiply 1-digit numbers by 3-digit or 4-digit numbers: choose the area model
+WKL|Multiply 1-digit numbers by 3-digit or 4-digit numbers using area models
+GDW|Multiply 1-digit numbers by 2-digit numbers
+UR9|Multiply 1-digit numbers by 2-digit numbers: word problems
+SEG|Multiply 1-digit numbers by 3-digit or 4-digit numbers using expanded form
+23C|Multiply 1-digit numbers by multi-digit numbers using partial products
+PPM|Multiply 1-digit numbers by 3-digit or 4-digit numbers
+AQ6|Multiply 1-digit numbers by 3-digit or 4-digit numbers: word problems
+## Math|Multiplication: 2-Digit Factors
+ASZ|Multiply 2-digit numbers by 2-digit numbers: choose the area model
+8K7|Multiply 2-digit numbers by 2-digit numbers using area models
+ERB|Box multiplication
+LBW|Lattice multiplication
+XLZ|Multiply 2-digit numbers by 2-digit numbers using partial products
+XQ8|Multiply a 2-digit number by a 2-digit number: complete the missing steps
+MLC|Multiply a 2-digit number by a 2-digit number
+GZG|Multiply a 2-digit number by a 2-digit number: word problems
+## Math|Multiplication: Strategies & Properties
+Y5K|Multiplication patterns over increasing place values
+7NS|Multiply by multiples of ten
+K98|Multiply two multiples of ten: word problems
+B6N|Properties of multiplication
+US7|Distributive property: find the missing factor
+LXG|Multiply using the distributive property
+## Math|Division Basics
+MYU|Choose numbers with a particular quotient
+M49|Divide 2-digit numbers by 1-digit numbers using arrays
+7LG|Divide 2-digit numbers by 1-digit numbers using area models
+UFM|Divide 2-digit numbers by 1-digit numbers: complete the table
+QMT|Divide 2-digit numbers by 1-digit numbers: word problems
+XD2|Divide 2-digit numbers by 1-digit numbers
+6UL|Divide 3-digit numbers by 1-digit numbers using area models
+YQL|Divide using partial quotients
+EGL|Divide using partial quotients with remainders
+DKK|Divide larger numbers by 1-digit numbers: word problems
+X86|Divide larger numbers by 1-digit numbers
+2UB|Divide larger numbers by 1-digit numbers: complete the table
+## Math|Division: Strategies & Properties
+Z5Y|Division patterns over increasing place values
+2K3|Divide numbers ending in zeros by 1-digit numbers
+6J4|Divide numbers ending in zeros by 1-digit numbers: word problems
+LAK|Properties of division
+GDX|Divide using the distributive property
+## Math|Equivalent Fractions
+HYC|Find equivalent fractions using area models
+CLW|Identify equivalent fractions using number lines
+WQL|Graph equivalent fractions on number lines
+K8C|Find equivalent fractions using multiplication and division
+GSG|Identify equivalent fractions
+7CY|Equivalent fractions: find the missing numerator or denominator
+VLP|Fractions with denominators of 10 and 100
+## Math|Comparing Fractions
+7XF|Compare fractions using models
+LUS|Benchmark fractions
+EHJ|Compare fractions using benchmarks
+UKZ|Compare fractions using benchmarks: find the missing numerator
+U2K|Compare fractions in recipes
+99U|Compare fractions
+## Math|Adding & Subtracting Fractions
+Y5W|Add fractions with like denominators using area models
+P99|Subtract fractions with like denominators using area models
+Z63|Add fractions with like denominators using strip models
+QAS|Subtract fractions with like denominators using strip models
+6QH|Add fractions with like denominators using number lines
+MJX|Subtract fractions with like denominators using number lines
+GAK|Add and subtract fractions with like denominators using number lines
+PDU|Add fractions with like denominators
+AVF|Subtract fractions with like denominators
+FXD|Add and subtract fractions with like denominators
+QG2|Decompose fractions into unit fractions using models
+XHG|Decompose fractions into unit fractions
+N2Z|Decompose fractions
+UEW|Decompose fractions multiple ways
+## Math|Mixed Numbers & Fraction Word Problems
+WZN|Add and subtract mixed numbers with like denominators - without regrouping
+L9M|Add mixed numbers with like denominators
+SLQ|Subtract mixed numbers with like denominators
+9AS|Add and subtract mixed numbers with like denominators
+XBR|Add and subtract fractions with like denominators: word problems
+LYR|Add and subtract fractions with like denominators in recipes
+5G5|Add and subtract fractions with like denominators: multi-step word problems
+YB5|Add and subtract mixed numbers with like denominators in recipes
+6KM|Add and subtract mixed numbers with like denominators: word problems
+PR2|Add and subtract fractions and mixed numbers with like denominators: multi-step word problems
+## Math|Multiplying Fractions by Whole Numbers
+8J3|Multiply unit fractions by whole numbers using models
+XKJ|Multiply unit fractions by whole numbers using number lines
+VYG|Multiples of unit fractions: find the missing numbers
+VGC|Multiply unit fractions by whole numbers: sorting
+Y5C|Multiply fractions by whole numbers using models
+CZ7|Multiply fractions by whole numbers using models: complete the equation
+Q7B|Multiply fractions by whole numbers using number lines
+EXQ|Multiply unit fractions by whole numbers
+RSY|Multiples of fractions: find the missing numbers
+X48|Multiply fractions by whole numbers: sorting
+JLH|Multiply fractions by whole numbers
+M2K|Multiply mixed numbers by whole numbers
+DSB|Multiply unit fractions by whole numbers: word problems
+LX8|Multiply fractions by whole numbers: word problems
+SFV|Multiply mixed numbers by whole numbers: word problems
+7B3|Multiply fractions and mixed numbers by whole numbers in recipes
+QDB|Multiply fractions and mixed numbers by whole numbers: multi-step word problems
+## Math|Decimals
+9RJ|Add fractions: denominators 10 and 100
+TZH|Identify fraction expressions with a particular sum: denominators of 10 and 100
+TPV|Model decimals and fractions
+2N9|Graph fractions as decimals on number lines
+6P7|Convert fractions and mixed numbers to decimals - denominators of 10 and 100
+DBF|Convert decimals to fractions and mixed numbers
+EAL|Compare money amounts
+CV7|Compare decimals using models
+T2W|Compare decimals on number lines
+DY5|Compare decimal numbers
+## Math|Measurement & Unit Conversions
+YYA|Which customary unit is appropriate?
+A89|Convert and compare customary units of length
+LJV|Convert and compare customary units of weight
+GAA|Convert and compare customary units of volume
+DRM|Convert and compare customary units
+U95|Convert mixed customary units
+FPM|Which metric unit is appropriate?
+GZM|Convert and compare metric units of length
+7RC|Convert and compare metric units of mass
+FHV|Convert and compare metric units of volume
+UL5|Convert and compare metric units
+YP2|Convert mixed metric units
+PS8|Convert time units: hours, minutes, and seconds
+QDA|Convert units of time
+## Math|Measurement, Time & Money Word Problems
+8U7|Compare customary units by multiplying
+2PY|Measurement word problems
+UST|Measurement word problems with fractions
+KXC|Multi-step measurement problems with conversions
+VCC|Elapsed time: word problems
+ZQP|Find start and end times: multi-step word problems
+2D5|Add and subtract money amounts: word problems
+## Math|Area & Perimeter
+KGJ|Find the perimeter of rectangles using formulas
+GBE|Perimeter: word problems
+JBF|Find the area of rectangles using formulas
+9E6|Find the area or missing side length of a rectangle
+JW7|Area: word problems
+GY2|Area between two rectangles
+S7Y|Compare area and perimeter of rectangles and squares
+SKK|Relationship between area and perimeter
+LTP|Area and perimeter: word problems
+HWY|Area and perimeter of complex figures: word problems
+5CZ|Solve problems involving the area and perimeter of rectangles
+S9M|Rectangles: relationship between perimeter and area word problems
+5GF|Use area and perimeter to determine cost
+## Math|Line Plots
+QQB|Create and interpret line plots with fractions
+JVG|Interpret line plots with fractions: multi-step problems
+## Math|Angles
+N72|Angles as fractions of a circle
+Q68|Use fractions to find the measure of an angle
+UQV|Angles of 90, 180, 270, and 360 degrees
+RK8|Measure angles on a circle
+LUJ|Estimate angle measurements
+NCN|Measure angles with a protractor
+R9K|Draw angles with a protractor
+VJY|Adjacent angles
+YUA|Angle measures: word problems
+MBL|Solve problems involving angle measures
+## Math|Geometry: Lines, Shapes & Symmetry
+8VQ|Parallel, perpendicular, and intersecting lines
+DSU|Identify parallel, perpendicular, and intersecting lines
+58M|Parallel sides in quadrilaterals
+9MK|Points, lines, line segments, rays, and angles
+R5K|Acute, right, obtuse, and straight angles
+67D|Sides and angles in polygons
+7QK|Acute, obtuse, and right triangles
+5UV|Scalene, isosceles, and equilateral triangles
+U59|Classify triangles
+PTK|Sides and angles of quadrilaterals
+A6V|Classify quadrilaterals
+6CT|Pick all the names for a quadrilateral
+TND|Name quadrilaterals more than one way
+9FD|Identify lines of symmetry
+SQF|Draw lines of symmetry
+MWS|Count lines of symmetry
+## ELA|Literature: Story Elements & Characters
+UB2|Draw inferences from a text
+SCC|Draw inferences and identify supporting details
+TXS|Make predictions about a story
+SRQ|Identify story elements
+6ML|Analyze plot elements
+VVG|Identify supporting details in literary texts
+CXM|Use actions and dialogue to understand characters
+GYD|Compare and contrast characters
+XY2|Show character emotions and traits
+LGA|Distinguish points of view
+EBK|Identify the narrative point of view
+## ELA|Literature: Theme & Summary
+6PW|Determine the themes of myths, fables, and folktales
+L7J|Determine the themes of short stories
+E9T|Identify the author's purpose and message
+XZF|Summarize a story
+## ELA|Literature: Poetry, Drama & Illustrations
+AQU|Label the rhyme scheme
+9FU|Identify elements of poetry
+J5P|Compare mythological illustrations
+## ELA|Reading Practice: Literature Passages
+26L|Read fantasy with illustrations
+2BC|Read realistic fiction with illustrations
+DFJ|Read science fiction with illustrations
+A7Z|Read realistic fiction
+59R|Read historical fiction
+TMW|Read poetry
+KJP|Read drama
+## ELA|Informational: Text Structure & Details
+99D|Determine the order of events in informational texts
+YBU|Compare and contrast in informational texts
+Z9L|Match causes and effects in informational texts
+F2B|Match problems with their solutions
+8CJ|Compare information from two texts
+8MJ|Identify supporting details in informational texts
+HR6|Identify and analyze text structures
+5C9|Analyze argumentative texts
+## ELA|Informational: Main Idea & Purpose
+DMM|Use key details to determine the main idea
+7XV|Determine the main idea of a passage
+VVF|Identify and analyze the main idea of a passage
+6RR|Identify the purpose of a text
+## ELA|Informational: Text Features & Combining Sources
+DH7|Read graphic organizers
+MW8|Select and use text features
+JZ2|Combine main ideas from two texts
+6GA|Organize information by topic
+## ELA|Reading Practice: Informational Passages
+7TG|Read about animals
+ZSE|Read about art, music, and traditions
+EM5|Read about famous places
+8V8|Read about sports and hobbies
+8SC|Read about famous people
+MZT|Read about business and technology
+RTC|Read about science and nature
+ZB2|Read about history
+## ELA|Vocabulary: Context Clues & Multiple Meanings
+LT5|Find words using context
+WDU|Determine the meaning of words using synonyms in context
+DC8|Use context to identify the meaning of a word
+QQC|Use academic vocabulary in context
+K7J|Determine the meaning of domain-specific words with pictures
+RQT|Find synonyms in context
+BTA|Find antonyms in context
+6DS|Which definition matches the sentence?
+VBG|Which sentence matches the definition?
+## ELA|Vocabulary: Figurative Language & Idioms
+8YE|Similes and metaphors with pictures
+F7J|Determine the meanings of similes and metaphors
+PV6|Interpret the meaning of an allusion from its source
+WMF|Analyze the effects of figures of speech on meaning and tone
+JMD|Determine the meaning of idioms from context: set 1
+PFB|Determine the meaning of idioms from context: set 2
+A72|Identify the meaning of idioms and adages: set 1
+KNW|Identify the meaning of idioms and adages: set 2
+## ELA|Vocabulary: Synonyms, Antonyms & Word Choice
+7XU|Choose the synonym
+QLF|Choose the antonym
+B6G|Which sentence has the same meaning?
+TJ6|Which sentence uses an antonym?
+N5T|Use thesaurus entries
+TWK|Shades of meaning with pictures
+78V|Describe the difference between related words
+ZEA|Positive and negative connotation
+## ELA|Reference Skills (Alphabetizing & Dictionary)
+9K2|Order alphabetically based on the first letter
+MCJ|Order alphabetically based on the first two letters
+5WL|Order alphabetically based on the first three letters
+NPW|Order alphabetically: challenge
+AJ5|Use guide words
+K7L|Use dictionary entries
+KXN|Use dictionary definitions
+## ELA|Word Study: Prefixes & Suffixes
+VSQ|Determine the meaning of a word with pre-, re-, or mis-
+F6D|Use the prefixes pre-, re-, and mis-
+8SP|Words with un-, dis-, in-, im-, and non-
+VDR|Determine the meaning of a word with -ful or -less
+J58|Determine the meaning of a word with -ly or -ness
+YZB|Determine the meaning of a word with -able or -ment
+XFL|Determine the meaning of a word with a suffix: review
+HQJ|Sort words with shared suffixes by part of speech
+2AW|Segment and read words with affixes
+F7T|Identify base words, prefixes, and suffixes
+VZH|Determine the meanings of words with prefixes and suffixes: review
+8GB|Sort words with shared prefixes and suffixes by meaning
+## ELA|Word Study: Greek & Latin Roots
+G7R|Sort words by shared Greek or Latin roots
+XNX|Use Greek and Latin roots as clues to the meanings of words
+49S|Use the meanings of words as clues to the meanings of Greek and Latin roots
+FCL|Determine the meanings of Greek and Latin roots
+BJ9|Determine the meanings of words with Greek and Latin roots
+TS8|Match words with Greek and Latin roots to their meanings
+CZR|Use words with roots and affixes
+## ELA|Word Study: Compound, Multisyllabic & Word Patterns
+SN5|Word pattern analogies
+GSW|Word pattern sentences
+WRS|Form compound words with pictures
+JSG|Form compound words
+JX5|Form and use compound words
+M8F|Segment multisyllabic words
+5F6|Read multisyllabic words
+XVS|Complete the sentence with the multisyllabic word
+UUV|Identify syllable types
+N84|Is the syllable open or closed?
+## ELA|Writing: Opinion & Supporting Reasons
+C9W|Identify an author's statement of opinion
+96L|Distinguish facts from opinions
+HW7|Choose reasons to support an opinion
+## ELA|Writing: Paragraph Organization
+2ER|Order items from most general to most specific
+82A|Remove the sentence that does not belong
+C5Z|Choose the best topic sentence
+68D|Choose the best concluding sentence
+DXR|Put the sentences in order
+TMH|Identify and correct plagiarism
+## ELA|Writing: Transitions & Linking Words
+F79|Use coordinating conjunctions
+27D|Use subordinating conjunctions
+YMU|Choose the best transition
+QWR|Identify time-order words
+XS7|Use the correct pair of correlative conjunctions
+XHT|Use linking words in paragraphs
+## ELA|Writing: Descriptive Details
+UZ9|Sort sensory details
+FFK|Identify sensory details
+6BY|Add imagery to stories
+HXU|Revise the sentence using a stronger verb
+## ELA|Grammar: Sentence Structure
+L7P|Is it a complete sentence or a fragment?
+AUH|Is it a complete sentence or a run-on?
+X9V|Is it a complete sentence, a fragment, or a run-on?
+JSA|Create varied sentences based on models
+7M3|Identify the complete subject of a sentence
+U6M|Identify the complete predicate of a sentence
+A5R|Identify the simple subject or predicate of a sentence
+ACF|Order the words to create a sentence
+EV2|Is the sentence simple or compound?
+XA7|Create compound sentences
+## ELA|Grammar: Pronouns, Verbs, Adjectives & Prepositions
+7HQ|Identify relative pronouns
+BMC|Use relative pronouns: who and whom
+5AY|Use relative pronouns: who, whom, whose, which, and that
+PJV|Use relative adverbs
+QNP|Use the progressive verb tenses
+SXQ|Form the progressive verb tenses
+B9S|What does the modal verb show?
+6HX|Use the correct modal verb
+57U|Order adjectives
+Y6S|Identify prepositional phrases
+ZJL|Prepositions: review
+## ELA|Punctuation
+D54|Correct errors with signs
+5CP|Commas with a series
+DLJ|Commas with dates
+ALN|Commas with the names of places
+5PV|Commas with direct addresses
+74G|Commas with introductory words and phrases
+UNT|Commas: review
+ECG|Punctuating dialogue
+## ELA|Capitalization
+HNY|Capitalizing the names of people and pets and titles of respect
+2RN|Capitalizing days, months, and holidays
+G2S|Capitalizing the names of places and geographic features
+L77|Capitalizing the names of historical events, periods, and documents
+G83|Capitalizing proper adjectives, nationalities, and languages
+58V|Capitalization: review
+JCE|Capitalizing titles
+## ELA|Spelling: Plurals & Possessives
+RKT|Form regular plurals with -s, -es, and -ies
+68P|Use regular plurals with -s, -es, and -ies
+5VG|Form regular plurals with -s, -es, -ies, and -ves
+FJN|Use regular plurals with -s, -es, -ies, and -ves
+9QM|Form and use irregular plurals
+WUG|Is the noun singular or plural?
+BRH|Form the singular or plural possessive
+WMN|Identify and correct errors with plural and possessive nouns
+## ELA|Spelling: Past Tense Verbs
+PQP|Identify verbs in the regular past tense
+FPR|Complete the verb with the ending that you hear
+29B|Form and use the regular past tense
+Q9P|Form and use the irregular past tense: set 1
+H6N|Form and use the irregular past tense: set 2
+49P|Form and use the irregular past tense: set 3
+MYG|Form and use the irregular past tense: set 4
+## ELA|Spelling: Common Words, Affixes & Sight Words
+E7S|Learn to spell words with prefixes: dis-, mis-, pre-
+BR2|Learn to spell words with suffixes: -able, -ish, -ment
+WPS|Spell words with affixes: review
+5AS|Learn to spell common words: set 1
+L89|Learn to spell common words: set 2
+KYL|Spell common words: sets 1 and 2
+LM7|Learn to spell common words: set 3
+UCC|Learn to spell common words: set 4
+WMB|Spell common words: sets 3 and 4
+B9D|Spell common words: review sets 1-4
+VZF|Spell multisyllabic words
+FHP|Read and spell sight words
+Z7H|Complete the sentence with the correct sight word
+## ELA|Spelling: Homophones, Contractions & Comparatives
+YE5|Homophones with pictures
+ZR5|Identify homophones
+6YG|Match homophones to their meanings
+S8L|Use the correct homophone
+U8T|Pronoun-verb contractions
+XNV|Contractions with "not"
+WA9|Spell adjectives that compare
